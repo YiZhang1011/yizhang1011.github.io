@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Yi Zhang Acupuncture and TCM Clinic</title>
+    <title>Contact - Yi Zhang Acupuncture and TCM Clinic</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -25,6 +25,9 @@
             justify-content: center;
             align-items: center;
             padding: 0 20px;
+        }
+        nav {
+            text-align: center;
         }
         nav ul {
             list-style-type: none;
@@ -52,35 +55,27 @@
             right: 20px;
             transform: translateY(-50%);
         }
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav ul {
-                margin-bottom: 15px;
-            }
-            .book-button {
-                margin-top: 10px;
-            }
-        }
         .hero {
             background-color: #f4f4f4;
             text-align: center;
             padding: 3rem 0;
         }
-        .hero h1 {
-            margin: 0;
-            color: #2c3e50;
-        }
-        .about {
+        .content {
             max-width: 800px;
             margin: 2rem auto;
             padding: 0 1rem;
-            text-align: justify;
         }
-        .about p {
-            margin-bottom: 1.5rem;
+        h1 {
+            color: #2c3e50;
+        }
+        .contact-info p {
+            margin: 10px 0;
+        }
+        .map {
+            width: 100%;
+            height: 300px;
+            border: none;
+            margin-top: 20px;
         }
         footer {
             background-color: #f4f4f4;
@@ -102,17 +97,24 @@
                 </ul>
             </nav>
         </div>
-        <a href="https://calendly.com/yiclinic-ottawa" class="book-button" target="_blank">Book an Appointment</a>
+        <a href="#" class="book-button">Book an Appointment</a>
     </header>
 
-    <section class="hero">
-        <h1>About Yi</h1>
-    </section>
+    <section class="content">
+        <div class="contact-info">
+            <p><strong>Address:</strong> 123 Main Street, Ottawa, ON K1P 1J1</p>
+            <p><strong>Phone:</strong> (613) 123-4567</p>
+            <p><strong>Email:</strong> info@yiclinic.ca</p>
+            <p><strong>Hours:</strong></p>
+            <ul>
+                <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+                <li>Saturday: 10:00 AM - 4:00 PM</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </div>
 
-    <section class="about">
-        <p>Yi received her Bachelor and Master's degrees in Traditional Chinese Medicine after 7 years of study acupuncture and Traditional Chinese Medicine at Beijing University of TCM in 2012, which is one of the most respected TCM university in China. She had been working as a dermatologist in Beijing Hospital of TCM since graduation. Having moved to Canada, Yi had finished courses and clinical internship with International Academy of Applied Health in Ottawa and certified as a registered Acupuncturist in Ontario since 2021.</p>
-
-        <p>Yi has dedicated her career to improving the overall health and help her patients feel their best. She has a deep understanding of the body's energy systems and how they can be balanced through acupuncture and TCM techniques. Given her background, Yi also has an ongoing interest in practicing cosmetic facial therapy, which naturally helps the skin look younger and overall healthier.</p>
+        <h2>Location</h2>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.3370194974816!2d-75.69002368444385!3d45.42121397910071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce05b25f5113af%3A0x8a6a51e131dd15ed!2s123%20Main%20St%2C%20Ottawa%2C%20ON%20K1S%201B2!5e0!3m2!1sen!2sca!4v1658876187443!5m2!1sen!2sca" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <footer>

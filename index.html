@@ -3,69 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Wife's Acupuncture Business</title>
+    <title>Yi Zhang Acupuncture and TCM Clinic - Acupuncture and Traditional Chinese Medicine</title>
     <style>
-        /* Basic CSS for layout */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            color: #333;
             margin: 0;
             padding: 0;
         }
-        header, nav, main, footer {
-            padding: 20px;
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: relative;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+        }
+        nav {
+            text-align: center;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
         }
         nav ul li {
-            display: inline;
-            margin-right: 10px;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .book-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        .hero {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        .services, .about {
+            padding: 2rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .service {
+            text-align: center;
+            max-width: 350px;
+            margin-bottom: 2rem;
+        }
+        .service h3, .about h2 {
+            margin-bottom: 10px;
+        }
+        .service p, .about p {
+            font-size: 0.9em;
+            text-align: justify;
+        }
+        .about {
+            text-align: center;
+        }
+        footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Your Wife's Acupuncture Business</h1>
+        <div class="header-content">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a href="#" class="book-button">Book an Appointment</a>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="booking.html">Book Now</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <section id="home" class="hero">
+        <h1>Yi Zhang Acupuncture and TCM Clinic</h1>
+        <p>Acupuncture and Traditional Chinese Medicine in Ottawa</p>
+    </section>
 
-    <main>
-        <section id="home">
-            <h2>Welcome to Our Acupuncture Practice</h2>
-            <p>Experience the healing power of traditional Chinese medicine.</p>
-        </section>
-
-        <section id="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Acupuncture</li>
-                <li>Cupping</li>
-                <li>Herbal Medicine</li>
-                <!-- Add more services as needed -->
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Phone: <a href="tel:+16138046390">(613) 804-6390</a></p>
-            <p>Email: <a href="mailto:Yi.Zhang1011@gmail.com">Yi.Zhang1011@gmail.com</a></p>
-            <p>Address: 172 Crevasse Rd. Ottawa, ON K1W OR5</p>
-        </section>
-    </main>
+    <section id="services" class="services">
+        <div class="service">
+            <h3>Acupuncture</h3>
+            <p>Traditional acupuncture treatments to restore balance and promote healing.</p>
+            <p>Acupuncture involves inserting thin needles into specific body points to balance energy flow, alleviate pain, reduce stress, and enhance overall wellness. Our practitioners use sterile, single-use needles and tailor treatments to your individual needs, addressing various health conditions through this time-tested Traditional Chinese Medicine technique.</p>
+        </div>
+        <div class="service">
+            <h3>TCM Consultation</h3>
+            <p>Personalized Traditional Chinese Medicine advice for holistic health.</p>
+            <p>Our TCM consultations provide a comprehensive health assessment using traditional diagnostic methods like pulse and tongue examination. We offer personalized recommendations including dietary advice, lifestyle modifications, and herbal prescriptions. This holistic approach aims to address root causes of health issues, promote balance, and enhance your body's natural healing abilities.</p>
+        </div>
+        <div class="service">
+            <h3>Cupping</h3>
+            <p>Traditional cupping therapy to improve circulation and relieve muscle tension.</p>
+            <p>Cupping therapy uses suction cups to enhance blood flow, relieve muscle tension, and promote healing. This technique can help reduce pain, decrease inflammation, and aid in relaxation and detoxification. We offer both traditional fire cupping and modern suction methods, tailoring the treatment to your specific needs and comfort level.</p>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2023 Your Wife's Acupuncture Business. All rights reserved.</p>
+        <p>&copy; 2024 Yi Zhang Acupuncture and TCM Clinic. All rights reserved.</p>
     </footer>
 </body>
 </html>
