@@ -55,41 +55,69 @@
             right: 20px;
             transform: translateY(-50%);
         }
+        .language-selector {
+            margin-left: 20px;
+        }
+        #languageSelect {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: white;
+            font-size: 14px;
+        }
         .hero {
             background-color: #f4f4f4;
             text-align: center;
             padding: 3rem 0;
         }
-        .services, .about {
-            padding: 2rem 0;
-            max-width: 1200px;
-            margin: 0 auto;
+        .hero h1 {
+            margin-bottom: 1rem;
         }
         .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
         .service {
-            text-align: center;
-            max-width: 350px;
             margin-bottom: 2rem;
-        }
-        .service h3, .about h2 {
-            margin-bottom: 10px;
-        }
-        .service p, .about p {
-            font-size: 0.9em;
-            text-align: justify;
-        }
-        .about {
-            text-align: center;
         }
         footer {
             background-color: #f4f4f4;
             text-align: center;
             padding: 1rem 0;
             margin-top: 2rem;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            .language-selector {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            .book-button {
+                position: static;
+                transform: none;
+                margin-top: 10px;
+                display: block;
+                text-align: center;
+            }
+            .hero {
+                padding: 2rem 0;
+            }
+            .hero h1 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
@@ -104,6 +132,12 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <div class="language-selector">
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="zh">中文</option>
+                </select>
+            </div>
         </div>
         <a href="https://calendly.com/yiclinic-ottawa" class="book-button" target="_blank">Book an Appointment</a>
     </header>
@@ -118,16 +152,6 @@
             <h3>Acupuncture</h3>
             <p>Traditional acupuncture treatments to restore balance and promote healing.</p>
             <p>Acupuncture involves inserting thin needles into specific body points to balance energy flow, alleviate pain, reduce stress, and enhance overall wellness. Our practitioners use sterile, single-use needles and tailor treatments to your individual needs, addressing various health conditions through this time-tested Traditional Chinese Medicine technique.</p>
-        </div>
-        <div class="service">
-            <h3>TCM Consultation</h3>
-            <p>Personalized Traditional Chinese Medicine advice for holistic health.</p>
-            <p>Our TCM consultations provide a comprehensive health assessment using traditional diagnostic methods like pulse and tongue examination. We offer personalized recommendations including dietary advice, lifestyle modifications, and herbal prescriptions. This holistic approach aims to address root causes of health issues, promote balance, and enhance your body's natural healing abilities.</p>
-        </div>
-        <div class="service">
-            <h3>Cupping</h3>
-            <p>Traditional cupping therapy to improve circulation and relieve muscle tension.</p>
-            <p>Cupping therapy uses suction cups to enhance blood flow, relieve muscle tension, and promote healing. This technique can help reduce pain, decrease inflammation, and aid in relaxation and detoxification. We offer both traditional fire cupping and modern suction methods, tailoring the treatment to your specific needs and comfort level.</p>
         </div>
     </section>
 
