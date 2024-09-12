@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment - Your Wife's Acupuncture Business</title>
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js'></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+        }
+        #calendar {
+            margin-bottom: 20px;
+        }
+        .fc-theme-standard .fc-toolbar {
+            font-size: 0.9em;
+        }
+        .fc .fc-button-primary {
+            background-color: #3498db;
+            border-color: #3498db;
+        }
+        .fc .fc-button-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+        .fc-theme-standard td, .fc-theme-standard th {
+            border-color: #ddd;
+        }
+        .fc-timegrid-slot {
+            height: 3em;
+        }
+        .fc-timegrid-slot-label {
+            font-size: 0.8em;
+        }
+        .fc-event {
+            background-color: #3498db;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book an Appointment</h1>
+    <form action="https://formspree.io/f/your_form_id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number">
+        <select name="service" required>
+            <option value="">Select a Service</option>
+            <option value="acupuncture">Acupuncture</option>
+            <option value="cupping">Cupping</option>
+            <option value="herbal-medicine">Herbal Medicine</option>
+        </select>
+        <div id="calendar"></div>
+        <input type="hidden" id="selected-date-time" name="date_time">
+        <textarea name="message" placeholder="Any additional information" rows="4"></textarea>
+        <input type="submit" value="Book Appointment">
+    </form>
+    <a href="website.html" class="back-link">Back to Home</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'timeGridWeek',
+                slotMinTime: '09:00:00',
+                slotMaxTime: '17:00:00',
+                allDaySlot: false,
+                slotDuration: '01:00:00',
+                selectable: true,
+                selectMirror: true,
+                dayMaxEvents: true,
+                weekends: false,
+                height: 'auto',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'timeGridWeek,timeGridDay'
+                },
+                select: function(info) {
+                    var selectedDateTime = info.start.toISOString();
+                    document.getElementById('selected-date-time').value = selectedDateTime;
+                    calendar.unselect();
+                    alert('Selected time: ' + info.start.toLocaleString());
+                },
+                businessHours: {
+                    daysOfWeek: [1, 2, 3, 4, 5], // Monday - Friday
+                    startTime: '09:00',
+                    endTime: '17:00',
+                },
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+</html>
