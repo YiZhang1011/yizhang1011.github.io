@@ -25,6 +25,10 @@
             justify-content: center;
             align-items: center;
             padding: 0 20px;
+            flex-wrap: wrap;
+        }
+        nav {
+            text-align: center;
         }
         nav ul {
             list-style-type: none;
@@ -32,6 +36,7 @@
             margin: 0;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         nav ul li {
             margin: 0 15px;
@@ -47,22 +52,18 @@
             text-decoration: none;
             border-radius: 5px;
             font-size: 0.9em;
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
+            display: inline-block;
+            margin-top: 10px;
         }
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav ul {
-                margin-bottom: 15px;
-            }
-            .book-button {
-                margin-top: 10px;
-            }
+        .language-selector {
+            margin-left: 20px;
+        }
+        #languageSelect {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: white;
+            font-size: 14px;
         }
         .hero {
             background-color: #f4f4f4;
@@ -70,23 +71,45 @@
             padding: 3rem 0;
         }
         .hero h1 {
-            margin: 0;
-            color: #2c3e50;
+            margin-bottom: 1rem;
         }
         .about {
             max-width: 800px;
             margin: 2rem auto;
             padding: 0 1rem;
-            text-align: justify;
-        }
-        .about p {
-            margin-bottom: 1.5rem;
         }
         footer {
             background-color: #f4f4f4;
             text-align: center;
             padding: 1rem 0;
             margin-top: 2rem;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul {
+                margin-bottom: 10px;
+            }
+            nav ul li {
+                margin: 5px 10px;
+            }
+            .language-selector {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            .book-button {
+                margin-top: 10px;
+            }
+            .hero {
+                padding: 2rem 0;
+            }
+            .hero h1 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
@@ -101,6 +124,12 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <div class="language-selector">
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="zh">中文</option>
+                </select>
+            </div>
         </div>
         <a href="https://calendly.com/yiclinic-ottawa" class="book-button" target="_blank">Book an Appointment</a>
     </header>
