@@ -53,7 +53,6 @@
             border-radius: 5px;
             font-size: 0.9em;
             display: inline-block;
-            margin-top: 10px;
         }
         .language-selector {
             margin-left: 20px;
@@ -89,6 +88,15 @@
         }
 
         /* Media queries for responsiveness */
+        @media (min-width: 769px) {
+            .book-button-container {
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+            }
+        }
+
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -104,14 +112,10 @@
                 margin-left: 0;
                 margin-top: 10px;
             }
-            .book-button {
+            .book-button-container {
+                width: 100%;
+                text-align: center;
                 margin-top: 10px;
-            }
-            .hero {
-                padding: 2rem 0;
-            }
-            .hero h1 {
-                font-size: 1.5em;
             }
         }
     </style>
@@ -123,7 +127,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -134,7 +138,7 @@
                 </select>
             </div>
         </div>
-        <div style="text-align: center;">
+        <div class="book-button-container">
             <a href="https://calendly.com/yiclinic-ottawa" class="book-button" target="_blank">Book an Appointment</a>
         </div>
     </header>
