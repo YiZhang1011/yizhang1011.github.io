@@ -16,7 +16,7 @@ document.getElementById("send-btn").addEventListener("click", async () => {
         const response = await fetch(apiUrl, {
             method: "POST",
             headers: {
-                "Authorization": hfToken,
+                "Authorization": `Bearer ${hfToken}`,
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
