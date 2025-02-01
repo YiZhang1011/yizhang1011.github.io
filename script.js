@@ -10,31 +10,27 @@ document.getElementById("send-btn").addEventListener("click", async () => {
     responseBox.innerText = "处理中，请稍候...";
 
     try {
-        const apiUrl = "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-alpha";
-        const hfToken = "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";
-
-        const response = await fetch(apiUrl, {
+        const response = await fetch("https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1", {
             method: "POST",
             headers: {
-                "Authorization": `Bearer ${hfToken}`,
+                "Authorization": "Bearer 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",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 inputs: userInput,
-                parameters: {
-                    "max_new_tokens": 150,
-                    "temperature": 0.7,
-                    "top_p": 0.9,
-                    "return_full_text": false
-                }
+                parameters: { "max_new_tokens": 100, "return_full_text": true }
             })
         });
 
         const result = await response.json();
         console.log("API Response:", result);
 
-        if (response.ok && result.length > 0 && result[0].generated_text) {
-            responseBox.innerText = result[0].generated_text;
+        if (response.ok) {
+            if (result.hasOwnProperty("generated_text")) {
+                responseBox.innerText = result.generated_text;
+            } else {
+                responseBox.innerText = "API 返回的数据格式不符合预期，请检查控制台日志。";
+            }
         } else {
             console.error("API Error Response:", result);
             responseBox.innerText = `请求失败，请稍后再试。错误代码: ${response.status}, 错误信息: ${JSON.stringify(result)}`;
