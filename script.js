@@ -10,7 +10,7 @@ document.getElementById("send-btn").addEventListener("click", async () => {
     responseBox.innerText = "处理中，请稍候...";
 
     try {
-        const apiUrl = "https://api-inference.huggingface.co/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B";
+        const apiUrl = "https://api-inference.huggingface.co/models/deepseek-ai/michaelwzhu/ShenNong-TCM-LLM";
         const hfToken = "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";
 
         const response = await fetch(apiUrl, {
