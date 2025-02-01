@@ -10,7 +10,7 @@ document.getElementById("send-btn").addEventListener("click", async () => {
     responseBox.innerText = "处理中，请稍候...";
 
     try {
-        const response = await fetch("https://api-inference.huggingface.co/models/michaelwzhu/ShenNong-TCM-LLM", {
+        const response = await fetch("https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer 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",
@@ -25,15 +25,18 @@ document.getElementById("send-btn").addEventListener("click", async () => {
         const result = await response.json();
         console.log("API Response:", result);
 
-        if (response.ok && result && result.length > 0) {
-            const generatedText = result[0]?.generated_text;
-            responseBox.innerText = generatedText || "抱歉，我无法回答您的问题。";
+        if (response.ok) {
+            if (result.hasOwnProperty("generated_text")) {
+                responseBox.innerText = result.generated_text;
+            } else {
+                responseBox.innerText = "API 返回的数据格式不符合预期，请检查控制台日志。";
+            }
         } else {
             console.error("API Error Response:", result);
-            responseBox.innerText = `请求失败，请稍后再试。错误代码: ${response.status}`;
+            responseBox.innerText = `请求失败，请稍后再试。错误代码: ${response.status}, 错误信息: ${JSON.stringify(result)}`;
         }
     } catch (error) {
         console.error("Network or API Error:", error);
-        responseBox.innerText = "网络错误，请检查您的连接或稍后重试。";
+        responseBox.innerText = "网络错误，请检查您的连接或稍后重试。错误详情已打印到控制台。";
     }
 });
