@@ -11,7 +11,7 @@ document.getElementById("send-btn").addEventListener("click", async () => {
 
     try {
         const apiUrl = "https://api-inference.huggingface.co/models/deepseek-ai/DeepSeek-V3";
-        const hfToken = "Bearer YOUR_HUGGINGFACE_API_KEY";
+        const hfToken = "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";
 
         const response = await fetch(apiUrl, {
             method: "POST",
