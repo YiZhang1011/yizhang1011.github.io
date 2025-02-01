@@ -10,7 +10,7 @@ document.getElementById("send-btn").addEventListener("click", async () => {
     responseBox.innerText = "处理中，请稍候...";
 
     try {
-        const response = await fetch("https://api-inference.huggingface.co/models/tiiuae/falcon-7b-instruct", {
+        const response = await fetch("https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat-hf", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer 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",
