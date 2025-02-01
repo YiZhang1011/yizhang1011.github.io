@@ -37,6 +37,6 @@ document.getElementById("send-btn").addEventListener("click", async () => {
         }
     } catch (error) {
         console.error("Network or API Error:", error);
-        responseBox.innerText = "网络错误，请检查您的连接或稍后重试。错误详情已打印到控制台。";
+        responseBox.innerText = `网络错误，请检查您的连接或稍后重试。\n错误详情: ${error.message}`;
     }
 });
