@@ -10,10 +10,10 @@ document.getElementById("send-btn").addEventListener("click", async () => {
     responseBox.innerText = "处理中，请稍候...";
 
     try {
-        const response = await fetch("https://api-inference.huggingface.co/models/distilgpt2", {
+        const response = await fetch("https://api-inference.huggingface.co/models/michaelwzhu/ShenNong-TCM-LLM", {
             method: "POST",
             headers: {
-                "Authorization": "Bearer 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",
+                "Authorization": "Bearer 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",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({ inputs: userInput })
