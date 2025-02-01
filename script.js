@@ -18,25 +18,22 @@ document.getElementById("send-btn").addEventListener("click", async () => {
             },
             body: JSON.stringify({
                 inputs: userInput,
-                parameters: { "return_full_text": false, "max_new_tokens": 100 }
+                parameters: { "max_new_tokens": 100, "return_full_text": true }
             })
         });
 
-        if (response.ok) {
-            const data = await response.json();
-            console.log("API Response:", data);
-            if (data && data.length > 0 && data[0].generated_text) {
-                responseBox.innerText = data[0].generated_text;
-            } else {
-                responseBox.innerText = "抱歉，我无法回答您的问题。";
-            }
+        const result = await response.json();
+        console.log("API Response:", result);
+
+        if (response.ok && result && result.length > 0) {
+            const generatedText = result[0]?.generated_text;
+            responseBox.innerText = generatedText || "抱歉，我无法回答您的问题。";
         } else {
-            const errorMsg = await response.text();
-            console.error("API Error:", errorMsg);
-            responseBox.innerText = "请求失败，请稍后再试。";
+            console.error("API Error Response:", result);
+            responseBox.innerText = `请求失败，请稍后再试。错误代码: ${response.status}`;
         }
     } catch (error) {
-        console.error("Network Error:", error);
-        responseBox.innerText = "网络错误，请检查您的连接。";
+        console.error("Network or API Error:", error);
+        responseBox.innerText = "网络错误，请检查您的连接或稍后重试。";
     }
 });
