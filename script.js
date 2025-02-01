@@ -10,13 +10,13 @@ document.getElementById("send-btn").addEventListener("click", async () => {
     responseBox.innerText = "处理中，请稍候...";
 
     try {
-        const apiUrl = "https://api-inference.huggingface.co/models/michaelwzhu/ShenNong-TCM-LLM";
-        const hfToken = "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";
+        const apiUrl = "https://api-inference.huggingface.co/models/deepseek-ai/deepseek-coder-6.7b-instruct";
+        const hfToken = "Bearer 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";
 
         const response = await fetch(apiUrl, {
             method: "POST",
             headers: {
-                "Authorization": `Bearer ${hfToken}`,
+                "Authorization": hfToken,
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
