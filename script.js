@@ -10,7 +10,7 @@ document.getElementById("send-btn").addEventListener("click", async () => {
     responseBox.innerText = "处理中，请稍候...";
 
     try {
-        const apiUrl = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct";
+        const apiUrl = "https://api-inference.huggingface.co/models/deepseek-ai/DeepSeek-V3";
         const hfToken = "Bearer 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";
 
         const response = await fetch(apiUrl, {
@@ -33,8 +33,12 @@ document.getElementById("send-btn").addEventListener("click", async () => {
         const result = await response.json();
         console.log("API Response:", result);
 
-        if (response.ok && result.length > 0 && result[0].generated_text) {
-            responseBox.innerText = result[0].generated_text;
+        if (response.ok) {
+            if (Array.isArray(result) && result.length > 0 && result[0].hasOwnProperty("generated_text")) {
+                responseBox.innerText = result[0].generated_text;
+            } else {
+                responseBox.innerText = "API 返回数据格式异常，请检查 Console (F12)。";
+            }
         } else {
             console.error("API Error Response:", result);
             responseBox.innerText = `请求失败，请稍后再试。错误代码: ${response.status}, 错误信息: ${JSON.stringify(result)}`;
