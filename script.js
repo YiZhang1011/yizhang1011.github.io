@@ -79,8 +79,8 @@ if (appointmentForm) {
         };
 
         // 基本验证
-        if (!formData.name || !formData.phone || !formData.date || !formData.time) {
-            const message = currentLanguage === 'zh' ? '请填写所有必填项' : 'Please fill in all required fields';
+        if (!formData.name || !formData.phone) {
+            const message = currentLanguage === 'zh' ? '请填写姓名和联系电话' : 'Please fill in name and phone number';
             showMessage(message, 'error');
             return;
         }
@@ -93,15 +93,17 @@ if (appointmentForm) {
             return;
         }
 
-        // 验证日期不能是过去的日期
-        const selectedDate = new Date(formData.date);
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        
-        if (selectedDate < today) {
-            const message = currentLanguage === 'zh' ? '请选择今天或未来的日期' : 'Please select today or a future date';
-            showMessage(message, 'error');
-            return;
+        // 验证日期不能是过去的日期（如果提供了日期）
+        if (formData.date) {
+            const selectedDate = new Date(formData.date);
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            if (selectedDate < today) {
+                const message = currentLanguage === 'zh' ? '请选择今天或未来的日期' : 'Please select today or a future date';
+                showMessage(message, 'error');
+                return;
+            }
         }
 
         // 模拟提交成功

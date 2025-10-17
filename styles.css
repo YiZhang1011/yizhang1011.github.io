@@ -154,6 +154,77 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(0);
 }
 
+/* 预约选项样式 */
+.booking-options {
+    margin-bottom: 2rem;
+}
+
+.booking-option {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.booking-option h4 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.booking-option p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.booking-divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.booking-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e1e8ed;
+}
+
+.booking-divider span {
+    background: var(--bg-white);
+    padding: 0 1rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.btn-calendly {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    background: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    transition: var(--transition);
+}
+
+.btn-calendly:hover {
+    background: #c49d2a;
+    border-color: #c49d2a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.calendly-icon {
+    font-size: 1.2rem;
+}
+
+.appointment-form {
+    border-top: 2px solid #f0f0f0;
+    padding-top: 2rem;
+}
+
 /* 首页横幅 */
 .hero {
     position: relative;
