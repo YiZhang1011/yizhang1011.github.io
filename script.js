@@ -166,7 +166,7 @@ function toggleLanguage() {
     // 更新切换按钮文字
     const toggleBtn = document.getElementById('languageToggle');
     if (toggleBtn) {
-        toggleBtn.textContent = currentLanguage === 'zh' ? 'EN' : '中';
+        toggleBtn.textContent = currentLanguage === 'zh' ? 'EN' : '中文';
     }
     
     // 保存语言选择到本地存储

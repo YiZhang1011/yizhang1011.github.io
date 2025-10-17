@@ -66,15 +66,8 @@
             </div>
             <div class="about-content">
                 <div class="about-image">
-                    <div class="image-placeholder">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="100" cy="100" r="80" fill="#e8f4f8"/>
-                            <path d="M100,30 Q120,50 100,70 T100,110 T100,150" stroke="#2c5f7f" stroke-width="3" fill="none"/>
-                            <circle cx="100" cy="30" r="5" fill="#d4af37"/>
-                            <circle cx="100" cy="70" r="5" fill="#d4af37"/>
-                            <circle cx="100" cy="110" r="5" fill="#d4af37"/>
-                            <circle cx="100" cy="150" r="5" fill="#d4af37"/>
-                        </svg>
+                    <div class="profile-image">
+                        <img src="profile.jpg" alt="张怿医师照片" class="doctor-photo">
                     </div>
                 </div>
                 <div class="about-text">
@@ -86,21 +79,21 @@
                             <span class="credential-icon">🎓</span>
                             <div>
                                 <h4 data-zh="专业教育背景" data-en="Professional Education">专业教育背景</h4>
-                                <p data-zh="北京中医药大学 7年专业学习<br>中医学学士及硕士学位（2012年）" data-en="Beijing University of TCM - 7 years of study<br>Bachelor's & Master's in TCM (2012)">北京中医药大学 7年专业学习<br>中医学学士及硕士学位（2012年）</p>
+                                <p data-zh="北京中医药大学 7年专业学习，中医学学士及硕士学位（2012年）" data-en="Beijing University of TCM - 7 years of study, Bachelor's & Master's in TCM (2012)">北京中医药大学 7年专业学习，中医学学士及硕士学位（2012年）</p>
                             </div>
                         </div>
                         <div class="credential-item">
                             <span class="credential-icon">🏥</span>
                             <div>
                                 <h4 data-zh="丰富临床经验" data-en="Clinical Experience">丰富临床经验</h4>
-                                <p data-zh="北京中医医院皮肤科医师<br>安大略省注册针灸师（2021年至今）" data-en="Dermatologist at Beijing Hospital of TCM<br>Ontario Registered Acupuncturist (2021-present)">北京中医医院皮肤科医师<br>安大略省注册针灸师（2021年至今）</p>
+                                <p data-zh="北京中医医院皮肤科医师，安大略省注册针灸师（2021年至今）" data-en="Dermatologist at Beijing Hospital of TCM, Ontario Registered Acupuncturist (2021-present)">北京中医医院皮肤科医师，安大略省注册针灸师（2021年至今）</p>
                             </div>
                         </div>
                         <div class="credential-item">
                             <span class="credential-icon">💫</span>
                             <div>
                                 <h4 data-zh="专业特长" data-en="Specialties">专业特长</h4>
-                                <p data-zh="面部美容针灸、皮肤调理<br>针灸、拔罐、刮痧、艾灸" data-en="Facial Cosmetic Acupuncture, Skin Care<br>Acupuncture, Cupping, Guasha, Moxibustion">面部美容针灸、皮肤调理<br>针灸、拔罐、刮痧、艾灸</p>
+                                <p data-zh="面部美容针灸、皮肤调理、针灸、拔罐、刮痧、艾灸" data-en="Facial Cosmetic Acupuncture, Skin Care, Acupuncture, Cupping, Guasha, Moxibustion">面部美容针灸、皮肤调理、针灸、拔罐、刮痧、艾灸</p>
                             </div>
                         </div>
                         <div class="credential-item">
@@ -229,26 +222,19 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-zh="联系预约" data-en="Contact & Booking">联系预约</h2>
+                <h2 class="section-title" data-zh="欢迎预约就诊咨询" data-en="Welcome for Appointment & Consultation">欢迎预约就诊咨询</h2>
                 <div class="section-divider"></div>
-                <p class="section-description" data-zh="欢迎致电咨询或预约就诊" data-en="Welcome to call for consultation or appointment booking">欢迎致电咨询或预约就诊</p>
             </div>
             <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h3 data-zh="诊所地址" data-en="Location">诊所地址</h3>
-                            <p class="contact-detail">Ottawa, Ontario, Canada</p>
-                            <p class="contact-note" data-zh="渥太华，安大略省" data-en="Ottawa, Ontario">渥太华，安大略省</p>
-                        </div>
-                    </div>
+                <div class="contact-card">
+                    <h3 data-zh="诊所地址" data-en="Location">诊所地址</h3>
+                    <p class="contact-detail">Ottawa, Ontario, Canada</p>
+                    <p class="contact-note" data-zh="渥太华，安大略省" data-en="Ottawa, Ontario">渥太华，安大略省</p>
                 </div>
-                <div class="contact-form">
+                <div class="contact-card">
                     <h3 data-zh="在线预约" data-en="Online Booking">在线预约</h3>
                     <a href="https://calendly.com/yiclinic-ottawa" target="_blank" class="btn btn-primary btn-calendly">
                         <span data-zh="立即预约" data-en="Book Now">立即预约</span>
-                        <span class="calendly-icon">📅</span>
                     </a>
                 </div>
             </div>
@@ -258,45 +244,8 @@
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>YiClinic 益诊所</h3>
-                    <p>传承中医智慧，守护健康人生<br>Traditional Chinese Medicine in Ottawa</p>
-                    <div class="social-links">
-                        <a href="https://www.yiclinic.ca" target="_blank" aria-label="官网">官网</a>
-                        <a href="#contact" aria-label="预约">预约</a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>快速链接 Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">首页 Home</a></li>
-                        <li><a href="#about" data-zh="关于张怿医师" data-en="About Yi Zhang">关于张怿医师</a></li>
-                        <li><a href="#services">服务项目 Services</a></li>
-                        <li><a href="#contact">联系预约 Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>服务项目 Services</h4>
-                    <ul class="footer-links">
-                        <li>针灸 Acupuncture</li>
-                        <li>面部美容针灸 Facial Acupuncture</li>
-                        <li>拔罐 Cupping</li>
-                        <li>刮痧 Guasha</li>
-                        <li>艾灸 Moxibustion</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>联系方式 Contact</h4>
-                    <ul class="footer-links">
-                        <li>📍 Ottawa, Ontario</li>
-                        <li>🗣️ 中文 / English</li>
-                        <li data-zh="👩‍⚕️ 张怿医师 - 注册针灸师" data-en="👩‍⚕️ Yi Zhang - Registered Acupuncturist">👩‍⚕️ 张怿医师 - 注册针灸师</li>
-                    </ul>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 YiClinic 益诊所. All Rights Reserved. | Registered Acupuncturist in Ontario</p>
+                <p>&copy; 2025 YiClinic 益诊所. All Rights Reserved. | Registered Acupuncturist in Ontario</p>
             </div>
         </div>
     </footer>
