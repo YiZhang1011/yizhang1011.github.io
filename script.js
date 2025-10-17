@@ -80,14 +80,16 @@ if (appointmentForm) {
 
         // 基本验证
         if (!formData.name || !formData.phone || !formData.date || !formData.time) {
-            showMessage('请填写所有必填项', 'error');
+            const message = currentLanguage === 'zh' ? '请填写所有必填项' : 'Please fill in all required fields';
+            showMessage(message, 'error');
             return;
         }
 
         // 验证电话格式（简单验证）
         const phoneRegex = /^[\d\s\-\+\(\)]+$/;
         if (!phoneRegex.test(formData.phone)) {
-            showMessage('请输入有效的电话号码', 'error');
+            const message = currentLanguage === 'zh' ? '请输入有效的电话号码' : 'Please enter a valid phone number';
+            showMessage(message, 'error');
             return;
         }
 
@@ -97,12 +99,14 @@ if (appointmentForm) {
         today.setHours(0, 0, 0, 0);
         
         if (selectedDate < today) {
-            showMessage('请选择今天或未来的日期', 'error');
+            const message = currentLanguage === 'zh' ? '请选择今天或未来的日期' : 'Please select today or a future date';
+            showMessage(message, 'error');
             return;
         }
 
         // 模拟提交成功
-        showMessage('预约提交成功！我们会尽快与您联系确认。', 'success');
+        const message = currentLanguage === 'zh' ? '预约提交成功！我们会尽快与您联系确认。' : 'Booking submitted successfully! We will contact you soon to confirm.';
+        showMessage(message, 'success');
         appointmentForm.reset();
 
         // 在实际应用中，这里应该发送数据到服务器
@@ -209,3 +213,77 @@ if (dateInput) {
     maxDate.setFullYear(maxDate.getFullYear() + 1);
     dateInput.setAttribute('max', maxDate.toISOString().split('T')[0]);
 }
+
+// 语言切换功能
+let currentLanguage = 'zh'; // 默认中文
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
+    updateLanguage();
+    
+    // 更新切换按钮文字
+    const toggleBtn = document.getElementById('languageToggle');
+    if (toggleBtn) {
+        toggleBtn.textContent = currentLanguage === 'zh' ? 'EN' : '中';
+    }
+    
+    // 保存语言选择到本地存储
+    localStorage.setItem('preferredLanguage', currentLanguage);
+}
+
+function updateLanguage() {
+    const elements = document.querySelectorAll('[data-zh][data-en]');
+    
+    elements.forEach(element => {
+        if (currentLanguage === 'zh') {
+            element.textContent = element.getAttribute('data-zh');
+        } else {
+            element.textContent = element.getAttribute('data-en');
+        }
+    });
+    
+    // 处理表单placeholder
+    const placeholders = document.querySelectorAll('[data-zh-placeholder][data-en-placeholder]');
+    placeholders.forEach(element => {
+        if (currentLanguage === 'zh') {
+            element.placeholder = element.getAttribute('data-zh-placeholder');
+        } else {
+            element.placeholder = element.getAttribute('data-en-placeholder');
+        }
+    });
+    
+    // 处理select选项
+    const selectOptions = document.querySelectorAll('option[data-zh][data-en]');
+    selectOptions.forEach(option => {
+        if (currentLanguage === 'zh') {
+            option.textContent = option.getAttribute('data-zh');
+        } else {
+            option.textContent = option.getAttribute('data-en');
+        }
+    });
+    
+    // 更新页面语言属性
+    document.documentElement.lang = currentLanguage === 'zh' ? 'zh-CN' : 'en';
+}
+
+// 页面加载时检查保存的语言设置
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage) {
+        currentLanguage = savedLanguage;
+    }
+    
+    // 更新切换按钮文字
+    const toggleBtn = document.getElementById('languageToggle');
+    if (toggleBtn) {
+        toggleBtn.textContent = currentLanguage === 'zh' ? 'EN' : '中';
+        
+        // 添加点击事件监听器
+        toggleBtn.addEventListener('click', () => {
+            toggleLanguage();
+        });
+    }
+    
+    // 应用语言设置
+    updateLanguage();
+});

@@ -130,6 +130,30 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition);
 }
 
+/* 语言切换按钮 */
+.language-toggle {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9rem;
+    min-width: 50px;
+    height: 40px;
+}
+
+.language-toggle:hover {
+    background: #c49d2a;
+    transform: translateY(-1px);
+}
+
+.language-toggle:active {
+    transform: translateY(0);
+}
+
 /* 首页横幅 */
 .hero {
     position: relative;
