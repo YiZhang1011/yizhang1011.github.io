@@ -20,11 +20,12 @@
                     <p class="logo-subtitle">渥太华中医针灸 | Ottawa TCM</p>
                 </div>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link active">首页 Home</a></li>
-                    <li><a href="#about" class="nav-link">关于我们 About</a></li>
-                    <li><a href="#services" class="nav-link">服务项目 Services</a></li>
-                    <li><a href="#benefits" class="nav-link">针灸疗效 Benefits</a></li>
-                    <li><a href="#contact" class="nav-link">联系预约 Contact</a></li>
+                    <li><a href="#home" class="nav-link active" data-zh="首页" data-en="Home">首页</a></li>
+                    <li><a href="#about" class="nav-link" data-zh="关于我们" data-en="About">关于我们</a></li>
+                    <li><a href="#services" class="nav-link" data-zh="服务项目" data-en="Services">服务项目</a></li>
+                    <li><a href="#benefits" class="nav-link" data-zh="针灸疗效" data-en="Benefits">针灸疗效</a></li>
+                    <li><a href="#contact" class="nav-link" data-zh="联系预约" data-en="Contact">联系预约</a></li>
+                    <li><button class="language-toggle" id="languageToggle" onclick="toggleLanguage()">EN</button></li>
                 </ul>
                 <button class="mobile-menu-toggle" id="mobileMenuToggle">
                     <span></span>
@@ -40,17 +41,15 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h2 class="hero-title fade-in">YiClinic 益诊所</h2>
-            <h3 class="hero-subtitle fade-in-delay">渥太华专业中医针灸 · 注册针灸师<br>Ottawa Professional TCM & Registered Acupuncturist</h3>
+            <h3 class="hero-subtitle fade-in-delay" data-zh="渥太华专业中医针灸 · 注册针灸师" data-en="Ottawa Professional TCM & Registered Acupuncturist">渥太华专业中医针灸 · 注册针灸师</h3>
             <p class="hero-description fade-in-delay-2">
-                Yi医师 - 北京中医药大学硕士 · 安大略省注册针灸师<br>
-                Dr. Yi - Beijing University of TCM Master's · Ontario Registered Acupuncturist<br><br>
-                针灸 | 面部美容针灸 | 拔罐 | 刮痧 | 艾灸<br>
-                Acupuncture | Facial Cosmetic Acupuncture | Cupping | Guasha | Moxibustion<br><br>
-                提供中英文服务 · English & Mandarin Services
+                <span data-zh="Yi医师 - 北京中医药大学硕士 · 安大略省注册针灸师" data-en="Dr. Yi - Beijing University of TCM Master's · Ontario Registered Acupuncturist">Yi医师 - 北京中医药大学硕士 · 安大略省注册针灸师</span><br><br>
+                <span data-zh="针灸 | 面部美容针灸 | 拔罐 | 刮痧 | 艾灸" data-en="Acupuncture | Facial Cosmetic Acupuncture | Cupping | Guasha | Moxibustion">针灸 | 面部美容针灸 | 拔罐 | 刮痧 | 艾灸</span><br><br>
+                <span data-zh="提供中英文服务" data-en="English & Mandarin Services">提供中英文服务</span>
             </p>
             <div class="hero-buttons fade-in-delay-3">
-                <a href="#contact" class="btn btn-primary">立即预约 Book Now</a>
-                <a href="#about" class="btn btn-secondary">了解更多 Learn More</a>
+                <a href="#contact" class="btn btn-primary" data-zh="立即预约" data-en="Book Now">立即预约</a>
+                <a href="#about" class="btn btn-secondary" data-zh="了解更多" data-en="Learn More">了解更多</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -62,7 +61,7 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">关于我们 About Us</h2>
+                <h2 class="section-title" data-zh="关于我们" data-en="About Us">关于我们</h2>
                 <div class="section-divider"></div>
             </div>
             <div class="about-content">
@@ -79,55 +78,41 @@
                     </div>
                 </div>
                 <div class="about-text">
-                    <h3>Yi医师 - 注册中医针灸师<br>Dr. Yi - Registered Acupuncturist</h3>
-                    <p class="lead">Yi医师毕业于中国最负盛名的中医药大学之一——北京中医药大学，拥有中医学学士和硕士学位，专注于针灸和传统中医治疗已有十余年。<br><br>
-                    Dr. Yi graduated from Beijing University of Traditional Chinese Medicine, one of the most prestigious TCM universities in China, with Bachelor's and Master's degrees in Traditional Chinese Medicine, specializing in acupuncture and TCM treatments for over ten years.</p>
+                    <h3 data-zh="Yi医师 - 注册中医针灸师" data-en="Dr. Yi - Registered Acupuncturist">Yi医师 - 注册中医针灸师</h3>
+                    <p class="lead" data-zh="Yi医师毕业于中国最负盛名的中医药大学之一——北京中医药大学，拥有中医学学士和硕士学位，专注于针灸和传统中医治疗已有十余年。" data-en="Dr. Yi graduated from Beijing University of Traditional Chinese Medicine, one of the most prestigious TCM universities in China, with Bachelor's and Master's degrees in Traditional Chinese Medicine, specializing in acupuncture and TCM treatments for over ten years.">Yi医师毕业于中国最负盛名的中医药大学之一——北京中医药大学，拥有中医学学士和硕士学位，专注于针灸和传统中医治疗已有十余年。</p>
                     
                     <div class="credentials">
                         <div class="credential-item">
                             <span class="credential-icon">🎓</span>
                             <div>
-                                <h4>专业教育背景<br>Professional Education</h4>
-                                <p>北京中医药大学 7年专业学习<br>
-                                中医学学士及硕士学位（2012年）<br><br>
-                                Beijing University of TCM - 7 years of study<br>
-                                Bachelor's & Master's in TCM (2012)</p>
+                                <h4 data-zh="专业教育背景" data-en="Professional Education">专业教育背景</h4>
+                                <p data-zh="北京中医药大学 7年专业学习<br>中医学学士及硕士学位（2012年）" data-en="Beijing University of TCM - 7 years of study<br>Bachelor's & Master's in TCM (2012)">北京中医药大学 7年专业学习<br>中医学学士及硕士学位（2012年）</p>
                             </div>
                         </div>
                         <div class="credential-item">
                             <span class="credential-icon">🏥</span>
                             <div>
-                                <h4>丰富临床经验<br>Clinical Experience</h4>
-                                <p>北京中医医院皮肤科医师<br>
-                                安大略省注册针灸师（2021年至今）<br><br>
-                                Dermatologist at Beijing Hospital of TCM<br>
-                                Ontario Registered Acupuncturist (2021-present)</p>
+                                <h4 data-zh="丰富临床经验" data-en="Clinical Experience">丰富临床经验</h4>
+                                <p data-zh="北京中医医院皮肤科医师<br>安大略省注册针灸师（2021年至今）" data-en="Dermatologist at Beijing Hospital of TCM<br>Ontario Registered Acupuncturist (2021-present)">北京中医医院皮肤科医师<br>安大略省注册针灸师（2021年至今）</p>
                             </div>
                         </div>
                         <div class="credential-item">
                             <span class="credential-icon">💫</span>
                             <div>
-                                <h4>专业特长<br>Specialties</h4>
-                                <p>面部美容针灸、皮肤调理<br>
-                                针灸、拔罐、刮痧、艾灸<br><br>
-                                Facial Cosmetic Acupuncture, Skin Care<br>
-                                Acupuncture, Cupping, Guasha, Moxibustion</p>
+                                <h4 data-zh="专业特长" data-en="Specialties">专业特长</h4>
+                                <p data-zh="面部美容针灸、皮肤调理<br>针灸、拔罐、刮痧、艾灸" data-en="Facial Cosmetic Acupuncture, Skin Care<br>Acupuncture, Cupping, Guasha, Moxibustion">面部美容针灸、皮肤调理<br>针灸、拔罐、刮痧、艾灸</p>
                             </div>
                         </div>
                         <div class="credential-item">
                             <span class="credential-icon">🌐</span>
                             <div>
-                                <h4>语言服务<br>Language Services</h4>
-                                <p>提供中文和英文服务<br>
-                                English and Mandarin Services</p>
+                                <h4 data-zh="语言服务" data-en="Language Services">语言服务</h4>
+                                <p data-zh="提供中文和英文服务" data-en="English and Mandarin Services">提供中文和英文服务</p>
                             </div>
                         </div>
                     </div>
 
-                    <blockquote class="philosophy">
-                        Yi医师致力于通过针灸和中医技术帮助患者改善整体健康状况。她对人体能量系统有着深刻的理解，擅长运用传统中医方法平衡身体机能。凭借在皮肤科的专业背景，Yi医师对面部美容治疗有着持续的热情和研究，能够自然地帮助肌肤焕发年轻光彩，提升整体健康状态。<br><br>
-                        <em>Dr. Yi is dedicated to improving overall health through acupuncture and TCM techniques. With deep understanding of the body's energy systems, she specializes in balancing body functions through traditional Chinese medicine methods. Her dermatology background gives her ongoing passion for cosmetic facial therapy, naturally helping skin look younger and healthier.</em>
-                    </blockquote>
+                    <blockquote class="philosophy" data-zh="Yi医师致力于通过针灸和中医技术帮助患者改善整体健康状况。她对人体能量系统有着深刻的理解，擅长运用传统中医方法平衡身体机能。凭借在皮肤科的专业背景，Yi医师对面部美容治疗有着持续的热情和研究，能够自然地帮助肌肤焕发年轻光彩，提升整体健康状态。" data-en="Dr. Yi is dedicated to improving overall health through acupuncture and TCM techniques. With deep understanding of the body's energy systems, she specializes in balancing body functions through traditional Chinese medicine methods. Her dermatology background gives her ongoing passion for cosmetic facial therapy, naturally helping skin look younger and healthier.">Yi医师致力于通过针灸和中医技术帮助患者改善整体健康状况。她对人体能量系统有着深刻的理解，擅长运用传统中医方法平衡身体机能。凭借在皮肤科的专业背景，Yi医师对面部美容治疗有着持续的热情和研究，能够自然地帮助肌肤焕发年轻光彩，提升整体健康状态。</blockquote>
                 </div>
             </div>
         </div>
@@ -137,70 +122,70 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">服务项目 Services</h2>
+                <h2 class="section-title" data-zh="服务项目" data-en="Services">服务项目</h2>
                 <div class="section-divider"></div>
-                <p class="section-description">根据您的具体情况，提供针对性的中医针灸治疗方案<br>Personalized TCM and acupuncture treatment plans based on your specific needs</p>
+                <p class="section-description" data-zh="根据您的具体情况，提供针对性的中医针灸治疗方案" data-en="Personalized TCM and acupuncture treatment plans based on your specific needs">根据您的具体情况，提供针对性的中医针灸治疗方案</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🎯</div>
-                    <h3>疼痛管理<br>Pain Management</h3>
-                    <p>颈椎病、腰椎病、肩周炎、关节炎等各类疼痛症状的针灸治疗<br>Acupuncture treatment for neck, back, shoulder, and joint pain</p>
+                    <h3 data-zh="疼痛管理" data-en="Pain Management">疼痛管理</h3>
+                    <p data-zh="颈椎病、腰椎病、肩周炎、关节炎等各类疼痛症状的针灸治疗" data-en="Acupuncture treatment for neck, back, shoulder, and joint pain">颈椎病、腰椎病、肩周炎、关节炎等各类疼痛症状的针灸治疗</p>
                     <ul class="service-list">
-                        <li>颈肩腰腿痛 Neck/Back/Leg Pain</li>
-                        <li>头痛偏头痛 Headaches & Migraines</li>
-                        <li>运动损伤 Sports Injuries</li>
+                        <li data-zh="颈肩腰腿痛" data-en="Neck/Back/Leg Pain">颈肩腰腿痛</li>
+                        <li data-zh="头痛偏头痛" data-en="Headaches & Migraines">头痛偏头痛</li>
+                        <li data-zh="运动损伤" data-en="Sports Injuries">运动损伤</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🌿</div>
-                    <h3>内科调理<br>Internal Medicine</h3>
-                    <p>消化系统、呼吸系统、神经系统等内科疾病的针灸辅助治疗<br>Acupuncture for digestive, respiratory, and nervous system disorders</p>
+                    <h3 data-zh="内科调理" data-en="Internal Medicine">内科调理</h3>
+                    <p data-zh="消化系统、呼吸系统、神经系统等内科疾病的针灸辅助治疗" data-en="Acupuncture for digestive, respiratory, and nervous system disorders">消化系统、呼吸系统、神经系统等内科疾病的针灸辅助治疗</p>
                     <ul class="service-list">
-                        <li>失眠焦虑 Insomnia & Anxiety</li>
-                        <li>消化不良 Digestive Issues</li>
-                        <li>过敏症状 Allergies</li>
+                        <li data-zh="失眠焦虑" data-en="Insomnia & Anxiety">失眠焦虑</li>
+                        <li data-zh="消化不良" data-en="Digestive Issues">消化不良</li>
+                        <li data-zh="过敏症状" data-en="Allergies">过敏症状</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">✨</div>
-                    <h3>面部美容针灸 ⭐<br>Facial Cosmetic Acupuncture</h3>
-                    <p>Yi医师专业特长！结合皮肤科背景，运用美容针灸技术自然改善肤质，延缓衰老<br>Dr. Yi's specialty! Natural skin improvement and anti-aging through cosmetic acupuncture</p>
+                    <h3 data-zh="面部美容针灸 ⭐" data-en="Facial Cosmetic Acupuncture ⭐">面部美容针灸 ⭐</h3>
+                    <p data-zh="Yi医师专业特长！结合皮肤科背景，运用美容针灸技术自然改善肤质，延缓衰老" data-en="Dr. Yi's specialty! Natural skin improvement and anti-aging through cosmetic acupuncture">Yi医师专业特长！结合皮肤科背景，运用美容针灸技术自然改善肤质，延缓衰老</p>
                     <ul class="service-list">
-                        <li>面部提升紧致 Face Lifting & Tightening</li>
-                        <li>祛斑淡纹抗衰 Anti-aging & Wrinkle Reduction</li>
-                        <li>改善气色肤质 Skin Tone & Texture</li>
-                        <li>自然健康无创 Natural & Non-invasive</li>
+                        <li data-zh="面部提升紧致" data-en="Face Lifting & Tightening">面部提升紧致</li>
+                        <li data-zh="祛斑淡纹抗衰" data-en="Anti-aging & Wrinkle Reduction">祛斑淡纹抗衰</li>
+                        <li data-zh="改善气色肤质" data-en="Skin Tone & Texture">改善气色肤质</li>
+                        <li data-zh="自然健康无创" data-en="Natural & Non-invasive">自然健康无创</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">⚖️</div>
-                    <h3>体质调理<br>Constitution Tuning</h3>
-                    <p>根据个人体质特点，进行针对性调理，增强体质，预防疾病<br>Personalized treatment to strengthen immunity and prevent illness</p>
+                    <h3 data-zh="体质调理" data-en="Constitution Tuning">体质调理</h3>
+                    <p data-zh="根据个人体质特点，进行针对性调理，增强体质，预防疾病" data-en="Personalized treatment to strengthen immunity and prevent illness">根据个人体质特点，进行针对性调理，增强体质，预防疾病</p>
                     <ul class="service-list">
-                        <li>亚健康调理 Sub-health Conditions</li>
-                        <li>免疫力提升 Immune System Boost</li>
-                        <li>季节性调养 Seasonal Wellness</li>
+                        <li data-zh="亚健康调理" data-en="Sub-health Conditions">亚健康调理</li>
+                        <li data-zh="免疫力提升" data-en="Immune System Boost">免疫力提升</li>
+                        <li data-zh="季节性调养" data-en="Seasonal Wellness">季节性调养</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🤰</div>
-                    <h3>妇科保健<br>Women's Health</h3>
-                    <p>月经不调、更年期综合症等妇科问题的针灸调理<br>Acupuncture for menstrual disorders, menopause, and women's health issues</p>
+                    <h3 data-zh="妇科保健" data-en="Women's Health">妇科保健</h3>
+                    <p data-zh="月经不调、更年期综合症等妇科问题的针灸调理" data-en="Acupuncture for menstrual disorders, menopause, and women's health issues">月经不调、更年期综合症等妇科问题的针灸调理</p>
                     <ul class="service-list">
-                        <li>月经调理 Menstrual Regulation</li>
-                        <li>产后恢复 Postpartum Recovery</li>
-                        <li>更年期调养 Menopause Support</li>
+                        <li data-zh="月经调理" data-en="Menstrual Regulation">月经调理</li>
+                        <li data-zh="产后恢复" data-en="Postpartum Recovery">产后恢复</li>
+                        <li data-zh="更年期调养" data-en="Menopause Support">更年期调养</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🎋</div>
-                    <h3>传统中医疗法<br>Traditional TCM Therapies</h3>
-                    <p>Yi医师提供多种传统中医理疗方法，全方位调理身体<br>Comprehensive TCM treatment methods for holistic wellness</p>
+                    <h3 data-zh="传统中医疗法" data-en="Traditional TCM Therapies">传统中医疗法</h3>
+                    <p data-zh="Yi医师提供多种传统中医理疗方法，全方位调理身体" data-en="Comprehensive TCM treatment methods for holistic wellness">Yi医师提供多种传统中医理疗方法，全方位调理身体</p>
                     <ul class="service-list">
-                        <li>拔罐疗法 Cupping Therapy</li>
-                        <li>刮痧疗法 Guasha/Scraping</li>
-                        <li>艾灸疗法 Moxibustion</li>
+                        <li data-zh="拔罐疗法" data-en="Cupping Therapy">拔罐疗法</li>
+                        <li data-zh="刮痧疗法" data-en="Guasha/Scraping">刮痧疗法</li>
+                        <li data-zh="艾灸疗法" data-en="Moxibustion">艾灸疗法</li>
                     </ul>
                 </div>
             </div>
@@ -211,30 +196,30 @@
     <section id="benefits" class="benefits">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">针灸疗效 Benefits</h2>
+                <h2 class="section-title" data-zh="针灸疗效" data-en="Benefits">针灸疗效</h2>
                 <div class="section-divider"></div>
-                <p class="section-description">中医针灸的独特优势<br>Unique advantages of Traditional Chinese Medicine acupuncture</p>
+                <p class="section-description" data-zh="中医针灸的独特优势" data-en="Unique advantages of Traditional Chinese Medicine acupuncture">中医针灸的独特优势</p>
             </div>
             <div class="benefits-grid">
                 <div class="benefit-item">
                     <div class="benefit-number">01</div>
-                    <h3>绿色疗法<br>Natural Therapy</h3>
-                    <p>无药物副作用，纯物理疗法，安全可靠<br>No side effects, pure physical therapy, safe and reliable</p>
+                    <h3 data-zh="绿色疗法" data-en="Natural Therapy">绿色疗法</h3>
+                    <p data-zh="无药物副作用，纯物理疗法，安全可靠" data-en="No side effects, pure physical therapy, safe and reliable">无药物副作用，纯物理疗法，安全可靠</p>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-number">02</div>
-                    <h3>标本兼治<br>Root & Symptom Treatment</h3>
-                    <p>不仅缓解症状，更从根本上调理身体<br>Not only relieves symptoms, but fundamentally treats the body</p>
+                    <h3 data-zh="标本兼治" data-en="Root & Symptom Treatment">标本兼治</h3>
+                    <p data-zh="不仅缓解症状，更从根本上调理身体" data-en="Not only relieves symptoms, but fundamentally treats the body">不仅缓解症状，更从根本上调理身体</p>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-number">03</div>
-                    <h3>适应症广<br>Wide Applications</h3>
-                    <p>可治疗多种慢性病及疑难杂症<br>Effective for various chronic conditions and complex disorders</p>
+                    <h3 data-zh="适应症广" data-en="Wide Applications">适应症广</h3>
+                    <p data-zh="可治疗多种慢性病及疑难杂症" data-en="Effective for various chronic conditions and complex disorders">可治疗多种慢性病及疑难杂症</p>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-number">04</div>
-                    <h3>预防保健<br>Preventive Care</h3>
-                    <p>增强免疫力，预防疾病，延年益寿<br>Boosts immunity, prevents illness, promotes longevity</p>
+                    <h3 data-zh="预防保健" data-en="Preventive Care">预防保健</h3>
+                    <p data-zh="增强免疫力，预防疾病，延年益寿" data-en="Boosts immunity, prevents illness, promotes longevity">增强免疫力，预防疾病，延年益寿</p>
                 </div>
             </div>
         </div>
@@ -244,64 +229,64 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">联系预约 Contact & Booking</h2>
+                <h2 class="section-title" data-zh="联系预约" data-en="Contact & Booking">联系预约</h2>
                 <div class="section-divider"></div>
-                <p class="section-description">欢迎致电咨询或预约就诊<br>Welcome to call for consultation or appointment booking</p>
+                <p class="section-description" data-zh="欢迎致电咨询或预约就诊" data-en="Welcome to call for consultation or appointment booking">欢迎致电咨询或预约就诊</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">📞</div>
                         <div>
-                            <h3>联系电话 Contact</h3>
+                            <h3 data-zh="联系电话" data-en="Contact Phone">联系电话</h3>
                             <p class="contact-detail">请访问 www.yiclinic.ca 获取</p>
-                            <p class="contact-note">周一至周六 9:00-18:00</p>
+                            <p class="contact-note" data-zh="周一至周六 9:00-18:00" data-en="Monday to Saturday 9:00-18:00">周一至周六 9:00-18:00</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">🌐</div>
                         <div>
-                            <h3>官方网站</h3>
+                            <h3 data-zh="官方网站" data-en="Official Website">官方网站</h3>
                             <p class="contact-detail"><a href="https://www.yiclinic.ca" target="_blank" style="color: #2c5f7f; text-decoration: none;">www.yiclinic.ca</a></p>
-                            <p class="contact-note">在线预约和更多信息</p>
+                            <p class="contact-note" data-zh="在线预约和更多信息" data-en="Online booking and more information">在线预约和更多信息</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">📍</div>
                         <div>
-                            <h3>诊所地址 Location</h3>
+                            <h3 data-zh="诊所地址" data-en="Location">诊所地址</h3>
                             <p class="contact-detail">Ottawa, Ontario, Canada</p>
-                            <p class="contact-note">渥太华，安大略省</p>
+                            <p class="contact-note" data-zh="渥太华，安大略省" data-en="Ottawa, Ontario">渥太华，安大略省</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">⏰</div>
                         <div>
-                            <h3>营业时间 Hours</h3>
-                            <p class="contact-detail">周一至周六：9:00-18:00<br>Monday to Saturday: 9:00 AM - 6:00 PM</p>
-                            <p class="contact-note">周日休息（紧急预约可协商）<br>Closed Sundays (emergency appointments available)</p>
+                            <h3 data-zh="营业时间" data-en="Hours">营业时间</h3>
+                            <p class="contact-detail" data-zh="周一至周六：9:00-18:00" data-en="Monday to Saturday: 9:00 AM - 6:00 PM">周一至周六：9:00-18:00</p>
+                            <p class="contact-note" data-zh="周日休息（紧急预约可协商）" data-en="Closed Sundays (emergency appointments available)">周日休息（紧急预约可协商）</p>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <h3>在线预约 Online Booking</h3>
+                    <h3 data-zh="在线预约" data-en="Online Booking">在线预约</h3>
                     <form id="appointmentForm">
                         <div class="form-group">
-                            <label for="name">姓名 Name *</label>
+                            <label for="name" data-zh="姓名 *" data-en="Name *">姓名 *</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">联系电话 Phone *</label>
+                            <label for="phone" data-zh="联系电话 *" data-en="Phone *">联系电话 *</label>
                             <input type="tel" id="phone" name="phone" required>
                         </div>
                         <div class="form-group">
-                            <label for="date">预约日期 Preferred Date *</label>
+                            <label for="date" data-zh="预约日期 *" data-en="Preferred Date *">预约日期 *</label>
                             <input type="date" id="date" name="date" required>
                         </div>
                         <div class="form-group">
-                            <label for="time">预约时间 Preferred Time *</label>
+                            <label for="time" data-zh="预约时间 *" data-en="Preferred Time *">预约时间 *</label>
                             <select id="time" name="time" required>
-                                <option value="">请选择时间 Please select time</option>
+                                <option value="" data-zh="请选择时间" data-en="Please select time">请选择时间</option>
                                 <option value="09:00">09:00 AM</option>
                                 <option value="10:00">10:00 AM</option>
                                 <option value="11:00">11:00 AM</option>
@@ -312,11 +297,11 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="symptoms">症状描述 Symptoms Description</label>
-                            <textarea id="symptoms" name="symptoms" rows="4" placeholder="请简要描述您的症状或需求 / Please briefly describe your symptoms or needs"></textarea>
+                            <label for="symptoms" data-zh="症状描述" data-en="Symptoms Description">症状描述</label>
+                            <textarea id="symptoms" name="symptoms" rows="4" data-zh-placeholder="请简要描述您的症状或需求" data-en-placeholder="Please briefly describe your symptoms or needs" placeholder="请简要描述您的症状或需求"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full">提交预约 Submit Booking</button>
-                        <p class="form-note">我们会在24小时内与您联系确认预约<br>We will contact you within 24 hours to confirm your appointment</p>
+                        <button type="submit" class="btn btn-primary btn-full" data-zh="提交预约" data-en="Submit Booking">提交预约</button>
+                        <p class="form-note" data-zh="我们会在24小时内与您联系确认预约" data-en="We will contact you within 24 hours to confirm your appointment">我们会在24小时内与您联系确认预约</p>
                     </form>
                 </div>
             </div>
