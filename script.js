@@ -63,58 +63,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// 表单验证和提交
-const appointmentForm = document.getElementById('appointmentForm');
-if (appointmentForm) {
-    appointmentForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // 获取表单数据
-        const formData = {
-            name: document.getElementById('name').value,
-            phone: document.getElementById('phone').value,
-            date: document.getElementById('date').value,
-            time: document.getElementById('time').value,
-            symptoms: document.getElementById('symptoms').value
-        };
-
-        // 基本验证
-        if (!formData.name || !formData.phone) {
-            const message = currentLanguage === 'zh' ? '请填写姓名和联系电话' : 'Please fill in name and phone number';
-            showMessage(message, 'error');
-            return;
-        }
-
-        // 验证电话格式（简单验证）
-        const phoneRegex = /^[\d\s\-\+\(\)]+$/;
-        if (!phoneRegex.test(formData.phone)) {
-            const message = currentLanguage === 'zh' ? '请输入有效的电话号码' : 'Please enter a valid phone number';
-            showMessage(message, 'error');
-            return;
-        }
-
-        // 验证日期不能是过去的日期（如果提供了日期）
-        if (formData.date) {
-            const selectedDate = new Date(formData.date);
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-            
-            if (selectedDate < today) {
-                const message = currentLanguage === 'zh' ? '请选择今天或未来的日期' : 'Please select today or a future date';
-                showMessage(message, 'error');
-                return;
-            }
-        }
-
-        // 模拟提交成功
-        const message = currentLanguage === 'zh' ? '预约提交成功！我们会尽快与您联系确认。' : 'Booking submitted successfully! We will contact you soon to confirm.';
-        showMessage(message, 'success');
-        appointmentForm.reset();
-
-        // 在实际应用中，这里应该发送数据到服务器
-        console.log('预约信息:', formData);
-    });
-}
+// Calendly预约链接处理
+// 所有预约都通过Calendly处理，无需额外的表单验证
 
 // 显示消息提示
 function showMessage(message, type) {
@@ -168,12 +118,7 @@ function showMessage(message, type) {
     }, 3000);
 }
 
-// 设置最小预约日期为今天
-const dateInput = document.getElementById('date');
-if (dateInput) {
-    const today = new Date().toISOString().split('T')[0];
-    dateInput.setAttribute('min', today);
-}
+// Calendly处理所有预约时间选择
 
 // 页面元素进入视口时添加动画效果
 const observerOptions = {
@@ -209,12 +154,7 @@ if (footerText) {
     footerText.innerHTML = footerText.innerHTML.replace('2024', currentYear);
 }
 
-// 防止未来日期超过1年
-if (dateInput) {
-    const maxDate = new Date();
-    maxDate.setFullYear(maxDate.getFullYear() + 1);
-    dateInput.setAttribute('max', maxDate.toISOString().split('T')[0]);
-}
+// Calendly自动管理预约时间范围
 
 // 语言切换功能
 let currentLanguage = 'zh'; // 默认中文

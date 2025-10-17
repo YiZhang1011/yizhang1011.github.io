@@ -236,22 +236,6 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <h3 data-zh="联系电话" data-en="Contact Phone">联系电话</h3>
-                            <p class="contact-detail">请访问 www.yiclinic.ca 获取</p>
-                            <p class="contact-note" data-zh="周一至周六 9:00-18:00" data-en="Monday to Saturday 9:00-18:00">周一至周六 9:00-18:00</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🌐</div>
-                        <div>
-                            <h3 data-zh="官方网站" data-en="Official Website">官方网站</h3>
-                            <p class="contact-detail"><a href="https://www.yiclinic.ca" target="_blank" style="color: #2c5f7f; text-decoration: none;">www.yiclinic.ca</a></p>
-                            <p class="contact-note" data-zh="在线预约和更多信息" data-en="Online booking and more information">在线预约和更多信息</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
                         <div class="contact-icon">📍</div>
                         <div>
                             <h3 data-zh="诊所地址" data-en="Location">诊所地址</h3>
@@ -259,73 +243,22 @@
                             <p class="contact-note" data-zh="渥太华，安大略省" data-en="Ottawa, Ontario">渥太华，安大略省</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">⏰</div>
-                        <div>
-                            <h3 data-zh="营业时间" data-en="Hours">营业时间</h3>
-                            <p class="contact-detail" data-zh="周一至周六：9:00-18:00" data-en="Monday to Saturday: 9:00 AM - 6:00 PM">周一至周六：9:00-18:00</p>
-                            <p class="contact-note" data-zh="周日休息（紧急预约可协商）" data-en="Closed Sundays (emergency appointments available)">周日休息（紧急预约可协商）</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="contact-form">
                     <h3 data-zh="在线预约" data-en="Online Booking">在线预约</h3>
                     
-                    <!-- Calendly预约选项 -->
+                    <!-- Calendly预约 -->
                     <div class="booking-options">
                         <div class="booking-option calendly-option">
-                            <h4 data-zh="📅 在线选择时间" data-en="📅 Choose Your Time">📅 在线选择时间</h4>
-                            <p data-zh="点击下方按钮直接选择预约时间，简单快捷" data-en="Click the button below to select your preferred appointment time directly">点击下方按钮直接选择预约时间，简单快捷</p>
+                            <h4 data-zh="📅 选择预约时间" data-en="📅 Choose Your Appointment Time">📅 选择预约时间</h4>
+                            <p data-zh="点击下方按钮直接选择您的预约时间，简单快捷" data-en="Click the button below to select your preferred appointment time directly">点击下方按钮直接选择您的预约时间，简单快捷</p>
                             <a href="https://calendly.com/yiclinic-ottawa" target="_blank" class="btn btn-primary btn-calendly">
                                 <span data-zh="立即预约" data-en="Book Now">立即预约</span>
                                 <span class="calendly-icon">📅</span>
                             </a>
-                        </div>
-                        
-                        <div class="booking-divider">
-                            <span data-zh="或" data-en="OR">或</span>
-                        </div>
-                        
-                        <!-- 传统表单作为备选 -->
-                        <div class="booking-option form-option">
-                            <h4 data-zh="📝 发送预约请求" data-en="📝 Send Booking Request">📝 发送预约请求</h4>
-                            <p data-zh="填写下方表单，我们会联系您确认时间" data-en="Fill out the form below and we'll contact you to confirm">填写下方表单，我们会联系您确认时间</p>
+                            <p class="booking-note" data-zh="预约系统会显示所有可用时间段，您可以选择最适合的时间" data-en="The booking system will show all available time slots for you to choose from">预约系统会显示所有可用时间段，您可以选择最适合的时间</p>
                         </div>
                     </div>
-                    
-                    <form id="appointmentForm" class="appointment-form">
-                        <div class="form-group">
-                            <label for="name" data-zh="姓名 *" data-en="Name *">姓名 *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone" data-zh="联系电话 *" data-en="Phone *">联系电话 *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="date" data-zh="偏好日期" data-en="Preferred Date">偏好日期</label>
-                            <input type="date" id="date" name="date">
-                        </div>
-                        <div class="form-group">
-                            <label for="time" data-zh="偏好时间" data-en="Preferred Time">偏好时间</label>
-                            <select id="time" name="time">
-                                <option value="" data-zh="请选择时间" data-en="Please select time">请选择时间</option>
-                                <option value="09:00">09:00 AM</option>
-                                <option value="10:00">10:00 AM</option>
-                                <option value="11:00">11:00 AM</option>
-                                <option value="14:00">02:00 PM</option>
-                                <option value="15:00">03:00 PM</option>
-                                <option value="16:00">04:00 PM</option>
-                                <option value="17:00">05:00 PM</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="symptoms" data-zh="症状描述" data-en="Symptoms Description">症状描述</label>
-                            <textarea id="symptoms" name="symptoms" rows="4" data-zh-placeholder="请简要描述您的症状或需求" data-en-placeholder="Please briefly describe your symptoms or needs" placeholder="请简要描述您的症状或需求"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-secondary btn-full" data-zh="发送预约请求" data-en="Send Booking Request">发送预约请求</button>
-                        <p class="form-note" data-zh="我们会在24小时内与您联系确认预约" data-en="We will contact you within 24 hours to confirm your appointment">我们会在24小时内与您联系确认预约</p>
-                    </form>
                 </div>
             </div>
         </div>
@@ -366,7 +299,6 @@
                     <h4>联系方式 Contact</h4>
                     <ul class="footer-links">
                         <li>📍 Ottawa, Ontario</li>
-                        <li>🌐 <a href="https://www.yiclinic.ca" target="_blank" style="color: rgba(255,255,255,0.8);">www.yiclinic.ca</a></li>
                         <li>🗣️ 中文 / English</li>
                         <li data-zh="👩‍⚕️ 张怿医师 - 注册针灸师" data-en="👩‍⚕️ Yi Zhang - Registered Acupuncturist">👩‍⚕️ 张怿医师 - 注册针灸师</li>
                     </ul>
