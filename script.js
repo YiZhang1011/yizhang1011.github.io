@@ -25,13 +25,25 @@ document.addEventListener('keydown', e => {
 });
 
 // 导航栏阴影 & 移动端预约按钮
+const bookingAreas = new Set();
+
 function onScroll() {
     const y = window.scrollY;
     navbar.classList.toggle('scrolled', y > 10);
     if (mobileBook) {
-        mobileBook.classList.toggle('show', y > hero.offsetHeight * 0.6);
+        mobileBook.classList.toggle('show', y > hero.offsetHeight * 0.6 && bookingAreas.size === 0);
     }
 }
+
+const bookingAreaObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) bookingAreas.add(entry.target);
+        else bookingAreas.delete(entry.target);
+    });
+    onScroll();
+});
+
+document.querySelectorAll('#locations, .footer').forEach(el => bookingAreaObserver.observe(el));
 
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
