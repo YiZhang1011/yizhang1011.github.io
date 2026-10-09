@@ -3,252 +3,526 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="YiClinic 益诊所 - 渥太华专业中医针灸诊所，提供针灸、拔罐、刮痧、艾灸等传统中医服务。Yi医师毕业于北京中医药大学，安大略省注册针灸师。Professional TCM clinic in Ottawa offering acupuncture, cupping, guasha, and moxibustion services.">
-    <title>YiClinic 益诊所 - 渥太华中医针灸诊所 | Ottawa Professional TCM & Acupuncture Clinic</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>YiClinic 益诊所 - 渥太华中医针灸 | Acupuncture & TCM in Ottawa</title>
+    <meta name="description" content="YiClinic 益诊所 - 渥太华中医针灸诊所。张怿，北京中医药大学中医学硕士，安大略省注册针灸师，提供针灸、面部美容针灸、拔罐、刮痧、艾灸，中英文服务。Acupuncture, facial acupuncture, cupping, guasha and moxibustion in Ottawa by Registered Acupuncturist Yi Zhang.">
+    <meta name="theme-color" content="#1c3461">
+    <link rel="canonical" href="https://www.yiclinic.ca/">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="YiClinic 益诊所">
+    <meta property="og:title" content="YiClinic 益诊所 - 渥太华中医针灸 | Acupuncture & TCM in Ottawa">
+    <meta property="og:description" content="安大略省注册针灸师张怿 · 针灸、面部美容针灸、拔罐、刮痧、艾灸 · 中英文服务。Registered Acupuncturist in Ottawa.">
+    <meta property="og:url" content="https://www.yiclinic.ca/">
+    <meta property="og:image" content="https://www.yiclinic.ca/profile.jpg">
+    <meta name="twitter:card" content="summary">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "YiClinic 益诊所",
+        "url": "https://www.yiclinic.ca/",
+        "image": "https://www.yiclinic.ca/profile.jpg",
+        "description": "Acupuncture and Traditional Chinese Medicine clinic in Ottawa, Ontario. Services in English and Mandarin.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ottawa",
+            "addressRegion": "ON",
+            "addressCountry": "CA"
+        },
+        "availableLanguage": ["English", "Chinese"],
+        "medicalSpecialty": "Acupuncture",
+        "employee": {
+            "@type": "Person",
+            "name": "Yi Zhang",
+            "jobTitle": "Registered Acupuncturist",
+            "alumniOf": "Beijing University of Chinese Medicine",
+            "workLocation": [
+                {
+                    "@type": "MedicalClinic",
+                    "name": "Bellefleur Physiotherapy - Orléans",
+                    "telephone": "+1-613-424-7852",
+                    "address": { "@type": "PostalAddress", "streetAddress": "3095 St Joseph Blvd, Unit 511", "addressLocality": "Orléans", "addressRegion": "ON", "postalCode": "K1E 3W6", "addressCountry": "CA" }
+                },
+                {
+                    "@type": "MedicalClinic",
+                    "name": "The Massage Therapy Company",
+                    "telephone": "+1-613-830-2224",
+                    "address": { "@type": "PostalAddress", "streetAddress": "5-2020 Lanthier Dr", "addressLocality": "Orléans", "addressRegion": "ON", "postalCode": "K4A 3V4", "addressCountry": "CA" }
+                },
+                {
+                    "@type": "MedicalClinic",
+                    "name": "New Life Physio & Health Clinic",
+                    "telephone": "+1-613-741-1510",
+                    "address": { "@type": "PostalAddress", "streetAddress": "1742 Montreal Rd", "addressLocality": "Ottawa", "addressRegion": "ON", "postalCode": "K1J 6N3", "addressCountry": "CA" }
+                }
+            ]
+        },
+        "potentialAction": {
+            "@type": "ReserveAction",
+            "target": "https://calendly.com/yiclinic-ottawa"
+        }
+    }
+    </script>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <h1>YiClinic 益诊所</h1>
-                    <p class="logo-subtitle">渥太华中医针灸 | Ottawa TCM</p>
+    <a class="skip-link" href="#main" data-zh="跳到主要内容" data-en="Skip to content">跳到主要内容</a>
+
+    <header class="navbar" id="navbar">
+        <div class="container nav-wrapper">
+            <a href="#home" class="logo" aria-label="YiClinic 益诊所">
+                <span class="logo-seal" aria-hidden="true">益</span>
+                <span class="logo-text">
+                    <span class="logo-name">YiClinic <span class="logo-cn">益诊所</span></span>
+                    <span class="logo-subtitle" data-zh="渥太华中医针灸" data-en="Acupuncture · Ottawa">渥太华中医针灸</span>
+                </span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu" aria-label="Main">
+                <a href="#about" class="nav-link" data-zh="关于医师" data-en="About">关于医师</a>
+                <a href="#services" class="nav-link" data-zh="服务项目" data-en="Services">服务项目</a>
+                <a href="#visit" class="nav-link" data-zh="就诊流程" data-en="Your Visit">就诊流程</a>
+                <a href="#faq" class="nav-link" data-zh="常见问题" data-en="FAQ">常见问题</a>
+                <a href="#locations" class="nav-link" data-zh="就诊地点" data-en="Locations">就诊地点</a>
+                <button class="language-toggle" type="button" data-lang-toggle aria-label="Switch language / 切换语言">EN</button>
+                <a href="#locations" class="btn btn-primary btn-sm nav-cta" data-zh="在线预约" data-en="Book Now">在线预约</a>
+            </nav>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-label="Menu" aria-controls="navMenu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- 首页 -->
+        <section id="home" class="hero">
+            <svg class="hero-mountains" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0 260 C 180 170, 300 210, 420 160 S 660 60, 820 140 S 1080 230, 1220 150 S 1380 120, 1440 140 L1440 320 L0 320 Z" fill="currentColor" opacity="0.05"/>
+                <path d="M0 290 C 220 230, 360 260, 540 220 S 860 170, 1020 230 S 1300 260, 1440 220 L1440 320 L0 320 Z" fill="currentColor" opacity="0.06"/>
+            </svg>
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow reveal" data-zh="安大略省注册针灸师 · 渥太华" data-en="Registered Acupuncturist · Ottawa">安大略省注册针灸师 · 渥太华</p>
+                    <h1 class="hero-title reveal" data-zh="调和身心，自然焕采" data-en="Balance within, radiance without">调和身心，自然焕采</h1>
+                    <p class="hero-lead reveal" data-zh="张怿，北京中医药大学中医学硕士，十余年针灸临床经验。在渥太华 Orléans 与 Gloucester 多个地点出诊，提供针灸、面部美容针灸、拔罐、刮痧与艾灸，中英文服务。" data-en="Yi Zhang holds a Master's in Traditional Chinese Medicine from Beijing University of Chinese Medicine and has over ten years of clinical experience. She sees clients at several locations in Orléans and Gloucester, offering acupuncture, facial acupuncture, cupping, guasha and moxibustion in English and Mandarin.">张怿，北京中医药大学中医学硕士，十余年针灸临床经验。在渥太华 Orléans 与 Gloucester 多个地点出诊，提供针灸、面部美容针灸、拔罐、刮痧与艾灸，中英文服务。</p>
+                    <div class="hero-buttons reveal">
+                        <a href="#locations" class="btn btn-primary" data-zh="选择地点预约" data-en="Book a Location">选择地点预约</a>
+                        <a href="#services" class="btn btn-ghost" data-zh="查看服务项目" data-en="Explore Services">查看服务项目</a>
+                    </div>
+                    <ul class="hero-trust reveal">
+                        <li>
+                            <strong data-zh="北京中医药大学" data-en="Beijing Univ. of CM">北京中医药大学</strong>
+                            <span data-zh="中医学学士 · 硕士" data-en="Bachelor's & Master's">中医学学士 · 硕士</span>
+                        </li>
+                        <li>
+                            <strong data-zh="10+ 年" data-en="10+ years">10+ 年</strong>
+                            <span data-zh="针灸临床经验" data-en="clinical experience">针灸临床经验</span>
+                        </li>
+                        <li>
+                            <strong data-zh="4 个地点" data-en="4 locations">4 个地点</strong>
+                            <span>Orléans · Gloucester</span>
+                        </li>
+                        <li>
+                            <strong>中文 · English</strong>
+                            <span data-zh="双语服务" data-en="bilingual care">双语服务</span>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link active" data-zh="首页" data-en="Home">首页</a></li>
-                    <li><a href="#about" class="nav-link" data-zh="关于我们" data-en="About">关于我们</a></li>
-                    <li><a href="#services" class="nav-link" data-zh="服务项目" data-en="Services">服务项目</a></li>
-                    <li><a href="#benefits" class="nav-link" data-zh="针灸疗效" data-en="Benefits">针灸疗效</a></li>
-                    <li><a href="#contact" class="nav-link" data-zh="联系预约" data-en="Contact">联系预约</a></li>
-                    <li><button class="language-toggle" id="languageToggle">EN</button></li>
+                <div class="hero-visual reveal">
+                    <div class="hero-arch">
+                        <img src="profile.jpg" alt="张怿 Yi Zhang, Registered Acupuncturist" width="415" height="430">
+                    </div>
+                    <div class="hero-badge">
+                        <span class="hero-badge-label" data-zh="特色项目" data-en="Specialties">特色项目</span>
+                        <ul class="hero-badge-list">
+                            <li data-zh="面部美容" data-en="Facial Acupuncture">面部美容</li>
+                            <li data-zh="睡眠情绪" data-en="Sleep & Stress">睡眠情绪</li>
+                            <li data-zh="疼痛调理" data-en="Pain Relief">疼痛调理</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于医师 -->
+        <section id="about" class="section about">
+            <div class="container about-grid">
+                <div class="about-intro reveal">
+                    <p class="eyebrow" data-zh="关于医师" data-en="About">关于医师</p>
+                    <h2 class="section-title" data-zh="张怿 · 注册针灸师" data-en="Yi Zhang, R.Ac">张怿 · 注册针灸师</h2>
+                    <p class="lead" data-zh="张怿毕业于北京中医药大学，接受七年系统中医学教育，获中医学学士及硕士学位，此后专注针灸与中医临床十余年。" data-en="Yi Zhang completed seven years of formal training at Beijing University of Chinese Medicine, earning both her Bachelor's and Master's degrees in Traditional Chinese Medicine, and has focused on acupuncture and TCM practice for over a decade.">张怿毕业于北京中医药大学，接受七年系统中医学教育，获中医学学士及硕士学位，此后专注针灸与中医临床十余年。</p>
+                    <blockquote class="philosophy">
+                        <p data-zh="她相信身体本身具有自我调节的能力。治疗的目的，是帮助身体重新找回平衡。曾在北京中医医院皮肤科工作的经历，让她对皮肤调理与面部美容针灸一直怀有热情，希望帮助每一位来访者由内而外地改善状态。" data-en="She believes the body has a natural capacity to regulate itself, and that treatment is about helping it find its balance again. Her years in the dermatology department of Beijing Hospital of TCM sparked a lasting passion for skin health and facial acupuncture, helping clients feel better from the inside out.">她相信身体本身具有自我调节的能力。治疗的目的，是帮助身体重新找回平衡。曾在北京中医医院皮肤科工作的经历，让她对皮肤调理与面部美容针灸一直怀有热情，希望帮助每一位来访者由内而外地改善状态。</p>
+                    </blockquote>
+                </div>
+
+                <ul class="credentials">
+                    <li class="credential reveal">
+                        <span class="icon-circle" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg>
+                        </span>
+                        <div>
+                            <h3 data-zh="教育背景" data-en="Education">教育背景</h3>
+                            <p data-zh="北京中医药大学 · 中医学学士、硕士（2012）" data-en="Beijing University of Chinese Medicine · Bachelor's & Master's in TCM (2012)">北京中医药大学 · 中医学学士、硕士（2012）</p>
+                        </div>
+                    </li>
+                    <li class="credential reveal">
+                        <span class="icon-circle" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M12 7v6M9 10h6"/><path d="M8 17h8"/></svg>
+                        </span>
+                        <div>
+                            <h3 data-zh="临床经历" data-en="Clinical Experience">临床经历</h3>
+                            <p data-zh="曾任北京中医医院皮肤科医师" data-en="Former physician, Dermatology Department, Beijing Hospital of TCM">曾任北京中医医院皮肤科医师</p>
+                        </div>
+                    </li>
+                    <li class="credential reveal">
+                        <span class="icon-circle" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 2z"/><path d="M8 21h8"/></svg>
+                        </span>
+                        <div>
+                            <h3 data-zh="执业资格" data-en="Registration">执业资格</h3>
+                            <p data-zh="安大略省注册针灸师（2021 年至今）" data-en="Registered Acupuncturist in Ontario (since 2021)">安大略省注册针灸师（2021 年至今）</p>
+                        </div>
+                    </li>
+                    <li class="credential reveal">
+                        <span class="icon-circle" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z"/></svg>
+                        </span>
+                        <div>
+                            <h3 data-zh="语言" data-en="Languages">语言</h3>
+                            <p data-zh="中文（普通话）、英文" data-en="English and Mandarin">中文（普通话）、英文</p>
+                        </div>
+                    </li>
                 </ul>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- 首页横幅 -->
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h2 class="hero-title fade-in">YiClinic 益诊所</h2>
-            <h3 class="hero-subtitle fade-in-delay" data-zh="渥太华专业中医针灸 · 注册针灸师" data-en="Ottawa Professional TCM & Registered Acupuncturist">渥太华专业中医针灸 · 注册针灸师</h3>
-            <p class="hero-description fade-in-delay-2">
-                <span data-zh="张怿医师 - 北京中医药大学硕士 · 安大略省注册针灸师" data-en="Yi Zhang - Beijing University of TCM Master's · Ontario Registered Acupuncturist">张怿医师 - 北京中医药大学硕士 · 安大略省注册针灸师</span><br><br>
-                <span data-zh="针灸 | 面部美容针灸 | 拔罐 | 刮痧 | 艾灸" data-en="Acupuncture | Facial Cosmetic Acupuncture | Cupping | Guasha | Moxibustion">针灸 | 面部美容针灸 | 拔罐 | 刮痧 | 艾灸</span><br><br>
-                <span data-zh="提供中英文服务" data-en="English & Mandarin Services">提供中英文服务</span>
-            </p>
-            <div class="hero-buttons fade-in-delay-3">
-                <a href="https://calendly.com/yiclinic-ottawa" target="_blank" class="btn btn-primary" data-zh="立即预约" data-en="Book Now">立即预约</a>
-                <a href="#about" class="btn btn-secondary" data-zh="了解更多" data-en="Learn More">了解更多</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+        <!-- 服务项目 -->
+        <section id="services" class="section services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="eyebrow" data-zh="服务项目" data-en="Services">服务项目</p>
+                    <h2 class="section-title" data-zh="因人而异的中医调理" data-en="Care tailored to you">因人而异的中医调理</h2>
+                    <p class="section-description" data-zh="每次治疗前都会详细了解您的情况，再制定适合您的针灸与中医方案。" data-en="Every treatment begins with understanding your health and goals, so your plan fits you.">每次治疗前都会详细了解您的情况，再制定适合您的针灸与中医方案。</p>
+                </div>
 
-    <!-- 关于我们 -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-zh="关于我们" data-en="About Us">关于我们</h2>
-                <div class="section-divider"></div>
+                <div class="services-grid">
+                    <article class="service-card service-card--featured reveal">
+                        <span class="service-tag" data-zh="特色项目" data-en="Signature">特色项目</span>
+                        <span class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 3c-4 0-7 3.2-7 8 0 5.5 3.5 10 7 10s7-4.5 7-10c0-4.8-3-8-7-8z"/><path d="M9 10h.01M15 10h.01"/><path d="M9.5 15c1.4 1 3.6 1 5 0"/><path d="M19 4l1 1M20 2v2M22 4h-2"/></svg>
+                        </span>
+                        <h3 data-zh="面部美容针灸" data-en="Facial Acupuncture">面部美容针灸</h3>
+                        <p data-zh="结合皮肤科临床背景，以细针作用于面部及全身穴位，帮助改善气色与肌肤状态。温和、无需恢复期。" data-en="Drawing on her dermatology background, Yi uses fine needles on facial and body points to support skin tone, texture and a healthy glow. Gentle, with no downtime.">结合皮肤科临床背景，以细针作用于面部及全身穴位，帮助改善气色与肌肤状态。温和、无需恢复期。</p>
+                        <ul class="service-list">
+                            <li data-zh="改善气色与肤质" data-en="Skin tone & texture">改善气色与肤质</li>
+                            <li data-zh="面部紧致与轮廓" data-en="Firmness & contour">面部紧致与轮廓</li>
+                            <li data-zh="细纹与抗衰调理" data-en="Fine lines & healthy aging">细纹与抗衰调理</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <span class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><path d="M12 7v7"/><path d="M8 9.5l4 1.5 4-1.5"/><path d="M9 21l3-7 3 7"/></svg>
+                        </span>
+                        <h3 data-zh="疼痛与肌肉骨骼" data-en="Pain & Musculoskeletal">疼痛与肌肉骨骼</h3>
+                        <p data-zh="针对颈肩腰背、关节及运动相关的不适，舒缓紧张、促进活动。" data-en="For neck, shoulder, back and joint discomfort, and activity-related strain.">针对颈肩腰背、关节及运动相关的不适，舒缓紧张、促进活动。</p>
+                        <ul class="service-list">
+                            <li data-zh="颈肩腰背痛" data-en="Neck, shoulder & back pain">颈肩腰背痛</li>
+                            <li data-zh="头痛" data-en="Headaches">头痛</li>
+                            <li data-zh="运动劳损" data-en="Sports strain">运动劳损</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <span class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+                        </span>
+                        <h3 data-zh="睡眠与情绪" data-en="Sleep & Stress">睡眠与情绪</h3>
+                        <p data-zh="帮助身心放松，调理睡眠质量与日常压力带来的不适。" data-en="Supports relaxation, better sleep and relief from everyday stress.">帮助身心放松，调理睡眠质量与日常压力带来的不适。</p>
+                        <ul class="service-list">
+                            <li data-zh="失眠多梦" data-en="Sleep difficulties">失眠多梦</li>
+                            <li data-zh="压力与焦虑" data-en="Stress & anxiety">压力与焦虑</li>
+                            <li data-zh="疲劳乏力" data-en="Fatigue">疲劳乏力</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <span class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 21c-5-3-8-6.5-8-10.5A4.5 4.5 0 0 1 12 7.5a4.5 4.5 0 0 1 8 3c0 4-3 7.5-8 10.5z"/></svg>
+                        </span>
+                        <h3 data-zh="女性健康" data-en="Women's Health">女性健康</h3>
+                        <p data-zh="在不同生命阶段为女性提供中医调理与支持。" data-en="TCM support for women through every stage of life.">在不同生命阶段为女性提供中医调理与支持。</p>
+                        <ul class="service-list">
+                            <li data-zh="月经调理" data-en="Menstrual health">月经调理</li>
+                            <li data-zh="产后恢复" data-en="Postpartum recovery">产后恢复</li>
+                            <li data-zh="更年期调养" data-en="Menopause support">更年期调养</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <span class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19L14 10"/></svg>
+                        </span>
+                        <h3 data-zh="消化与体质调理" data-en="Digestion & Wellness">消化与体质调理</h3>
+                        <p data-zh="根据个人体质调理脾胃、改善亚健康状态，顺应季节养生。" data-en="Constitution-based care for digestion, general wellbeing and seasonal balance.">根据个人体质调理脾胃、改善亚健康状态，顺应季节养生。</p>
+                        <ul class="service-list">
+                            <li data-zh="消化不适" data-en="Digestive discomfort">消化不适</li>
+                            <li data-zh="亚健康调理" data-en="General wellness">亚健康调理</li>
+                            <li data-zh="季节性调养" data-en="Seasonal care">季节性调养</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <span class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 3v4"/><path d="M8 5l1.5 3M16 5l-1.5 3"/><rect x="6" y="10" width="12" height="11" rx="5"/></svg>
+                        </span>
+                        <h3 data-zh="传统中医疗法" data-en="Traditional Therapies">传统中医疗法</h3>
+                        <p data-zh="可根据需要与针灸配合使用，或单独进行。" data-en="Used alongside acupuncture or on their own, as needed.">可根据需要与针灸配合使用，或单独进行。</p>
+                        <ul class="service-list">
+                            <li data-zh="拔罐" data-en="Cupping">拔罐</li>
+                            <li data-zh="刮痧" data-en="Guasha">刮痧</li>
+                            <li data-zh="艾灸" data-en="Moxibustion">艾灸</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="profile-image">
-                        <img src="profile.jpg" alt="张怿医师照片" class="doctor-photo">
+        </section>
+
+        <!-- 疗法介绍 -->
+        <section class="section therapies">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="eyebrow eyebrow--light" data-zh="疗法介绍" data-en="Therapies">疗法介绍</p>
+                    <h2 class="section-title" data-zh="传承千年的中医手法" data-en="Time-honoured techniques">传承千年的中医手法</h2>
+                </div>
+                <div class="therapies-grid">
+                    <div class="therapy reveal">
+                        <span class="therapy-char" aria-hidden="true">针</span>
+                        <h3 data-zh="针灸" data-en="Acupuncture">针灸</h3>
+                        <p data-zh="以一次性无菌细针刺激穴位，疏通经络、调和气血。" data-en="Single-use sterile fine needles stimulate specific points to promote the flow of qi and blood.">以一次性无菌细针刺激穴位，疏通经络、调和气血。</p>
+                    </div>
+                    <div class="therapy reveal">
+                        <span class="therapy-char" aria-hidden="true">罐</span>
+                        <h3 data-zh="拔罐" data-en="Cupping">拔罐</h3>
+                        <p data-zh="借助负压作用于肌肤，促进局部循环、舒缓肌肉紧张。" data-en="Gentle suction on the skin encourages local circulation and eases muscle tension.">借助负压作用于肌肤，促进局部循环、舒缓肌肉紧张。</p>
+                    </div>
+                    <div class="therapy reveal">
+                        <span class="therapy-char" aria-hidden="true">刮</span>
+                        <h3 data-zh="刮痧" data-en="Guasha">刮痧</h3>
+                        <p data-zh="以刮痧板在皮肤表面刮拭，放松肌肉、促进气血运行。" data-en="A smooth tool is stroked along the skin to relax muscles and move qi and blood.">以刮痧板在皮肤表面刮拭，放松肌肉、促进气血运行。</p>
+                    </div>
+                    <div class="therapy reveal">
+                        <span class="therapy-char" aria-hidden="true">灸</span>
+                        <h3 data-zh="艾灸" data-en="Moxibustion">艾灸</h3>
+                        <p data-zh="以艾草温熨穴位，温经散寒，适合怕冷、体虚者。" data-en="Warming mugwort over acupoints to dispel cold, often helpful for those who feel cold or depleted.">以艾草温熨穴位，温经散寒，适合怕冷、体虚者。</p>
                     </div>
                 </div>
-                <div class="about-text">
-                    <h3 data-zh="张怿医师 - 注册中医针灸师" data-en="Yi Zhang - Registered Acupuncturist">张怿医师 - 注册中医针灸师</h3>
-                    <p class="lead" data-zh="张怿医师毕业于中国最负盛名的中医药大学之一——北京中医药大学，拥有中医学学士和硕士学位，专注于针灸和传统中医治疗已有十余年。" data-en="Yi Zhang graduated from Beijing University of Traditional Chinese Medicine, one of the most prestigious TCM universities in China, with Bachelor's and Master's degrees in Traditional Chinese Medicine, specializing in acupuncture and TCM treatments for over ten years.">张怿医师毕业于中国最负盛名的中医药大学之一——北京中医药大学，拥有中医学学士和硕士学位，专注于针灸和传统中医治疗已有十余年。</p>
-                    
-                    <div class="credentials">
-                        <div class="credential-item">
-                            <span class="credential-icon">🎓</span>
-                            <div>
-                                <h4 data-zh="专业教育背景" data-en="Professional Education">专业教育背景</h4>
-                                <p data-zh="北京中医药大学 7年专业学习，中医学学士及硕士学位（2012年）" data-en="Beijing University of TCM - 7 years of study, Bachelor's & Master's in TCM (2012)">北京中医药大学 7年专业学习，中医学学士及硕士学位（2012年）</p>
-                            </div>
+            </div>
+        </section>
+
+        <!-- 就诊流程 -->
+        <section id="visit" class="section visit">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="eyebrow" data-zh="就诊流程" data-en="Your Visit">就诊流程</p>
+                    <h2 class="section-title" data-zh="第一次来，会是怎样的？" data-en="What to expect on your first visit">第一次来，会是怎样的？</h2>
+                </div>
+                <ol class="steps">
+                    <li class="step reveal">
+                        <span class="step-num">01</span>
+                        <h3 data-zh="在线预约" data-en="Book online">在线预约</h3>
+                        <p data-zh="选择离您最方便的地点，在线挑选时间，即时确认。" data-en="Choose the location that suits you best and pick a time online, with instant confirmation.">选择离您最方便的地点，在线挑选时间，即时确认。</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num">02</span>
+                        <h3 data-zh="问诊评估" data-en="Consultation">问诊评估</h3>
+                        <p data-zh="详细了解您的健康史与诉求，结合舌诊、脉诊进行中医评估。" data-en="We discuss your health history and goals, with a TCM assessment including tongue and pulse.">详细了解您的健康史与诉求，结合舌诊、脉诊进行中医评估。</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num">03</span>
+                        <h3 data-zh="个性化治疗" data-en="Personalized treatment">个性化治疗</h3>
+                        <p data-zh="在安静舒适的环境中进行针灸或其他中医治疗，过程中随时沟通感受。" data-en="Your treatment takes place in a calm, comfortable setting, and you can share how you feel at any point.">在安静舒适的环境中进行针灸或其他中医治疗，过程中随时沟通感受。</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num">04</span>
+                        <h3 data-zh="调养建议" data-en="Ongoing care">调养建议</h3>
+                        <p data-zh="提供饮食起居方面的建议，并与您商定后续的治疗计划。" data-en="You'll receive lifestyle and diet suggestions, and together we'll plan next steps.">提供饮食起居方面的建议，并与您商定后续的治疗计划。</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section id="faq" class="section faq">
+            <div class="container faq-grid">
+                <div class="faq-intro reveal">
+                    <p class="eyebrow" data-zh="常见问题" data-en="FAQ">常见问题</p>
+                    <h2 class="section-title" data-zh="您可能想知道" data-en="Questions you may have">您可能想知道</h2>
+                    <p class="section-description" data-zh="还有其他问题？欢迎在预约时备注，我们会在就诊前与您联系。" data-en="Have another question? Add a note when booking and we'll get back to you before your visit.">还有其他问题？欢迎在预约时备注，我们会在就诊前与您联系。</p>
+                </div>
+                <div class="faq-list">
+                    <details class="faq-item reveal">
+                        <summary data-zh="针灸会痛吗？" data-en="Does acupuncture hurt?">针灸会痛吗？</summary>
+                        <p data-zh="针灸针非常细，远细于打针用的针头。进针时多数人只有轻微感觉，之后可能出现酸、胀、麻、沉等“得气”感，通常很快适应，很多人治疗时会放松到睡着。" data-en="Acupuncture needles are extremely fine, far thinner than injection needles. Most people feel only a slight sensation on insertion, sometimes followed by a dull ache, warmth or heaviness. Many clients relax enough to fall asleep.">针灸针非常细，远细于打针用的针头。进针时多数人只有轻微感觉，之后可能出现酸、胀、麻、沉等“得气”感，通常很快适应，很多人治疗时会放松到睡着。</p>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary data-zh="针灸安全吗？" data-en="Is acupuncture safe?">针灸安全吗？</summary>
+                        <p data-zh="所有针具均为一次性无菌针，用后即弃。张怿是安大略省注册针灸师，遵循省级执业及卫生标准。如您怀孕、正在服用抗凝药物或有其他健康状况，请在就诊时告知。" data-en="All needles are single-use, sterile and disposed of after each treatment. Yi is a Registered Acupuncturist in Ontario and follows provincial practice and safety standards. Please let us know if you are pregnant, take blood thinners or have other health conditions.">所有针具均为一次性无菌针，用后即弃。张怿是安大略省注册针灸师，遵循省级执业及卫生标准。如您怀孕、正在服用抗凝药物或有其他健康状况，请在就诊时告知。</p>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary data-zh="治疗前需要做什么准备？" data-en="How should I prepare?">治疗前需要做什么准备？</summary>
+                        <p data-zh="建议穿着宽松舒适的衣物；就诊前适量进食，避免空腹或过饱；面部美容针灸前请尽量不化妆。" data-en="Wear loose, comfortable clothing and have a light meal beforehand; avoid coming hungry or overly full. For facial acupuncture, please come without makeup if possible.">建议穿着宽松舒适的衣物；就诊前适量进食，避免空腹或过饱；面部美容针灸前请尽量不化妆。</p>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary data-zh="需要做几次治疗？" data-en="How many sessions will I need?">需要做几次治疗？</summary>
+                        <p data-zh="因人而异，取决于您的具体情况、病程长短和身体反应。首次就诊评估后，会与您一起商量合适的治疗频率与疗程。" data-en="It depends on your condition, how long you've had it and how your body responds. After your first assessment, we'll discuss a frequency and plan that suits you.">因人而异，取决于您的具体情况、病程长短和身体反应。首次就诊评估后，会与您一起商量合适的治疗频率与疗程。</p>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary data-zh="保险可以报销吗？" data-en="Is it covered by insurance?">保险可以报销吗？</summary>
+                        <p data-zh="许多雇主提供的补充医疗保险（extended health benefits）涵盖注册针灸师的服务，具体范围请咨询您的保险公司。在 Bellefleur、The Massage Therapy Company 和 New Life 三家诊所就诊，可由诊所直接向多数保险公司报销（direct billing）；在私人诊室就诊则提供注册针灸师收据，供您自行报销。" data-en="Many extended health benefit plans cover services by a Registered Acupuncturist; please check your coverage with your insurer. At Bellefleur, The Massage Therapy Company and New Life, the clinic can bill most insurers directly. At the private studio, you'll receive an official receipt to submit yourself.">许多雇主提供的补充医疗保险（extended health benefits）涵盖注册针灸师的服务，具体范围请咨询您的保险公司。在 Bellefleur、The Massage Therapy Company 和 New Life 三家诊所就诊，可由诊所直接向多数保险公司报销（direct billing）；在私人诊室就诊则提供注册针灸师收据，供您自行报销。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- 就诊地点 -->
+        <section id="locations" class="section locations">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="eyebrow" data-zh="就诊地点" data-en="Locations">就诊地点</p>
+                    <h2 class="section-title" data-zh="张怿的出诊地点" data-en="Where to find Yi">张怿的出诊地点</h2>
+                    <p class="section-description" data-zh="点击「预约」，即可查看她在该地点的可约时间。" data-en="Tap “Book” to see her availability at each location.">点击「预约」，即可查看她在该地点的可约时间。</p>
+                </div>
+
+                <div class="locations-grid">
+                    <article class="location-card location-card--featured reveal">
+                        <p class="location-area" data-zh="渥太华 · 私人诊室" data-en="Ottawa · Private Studio">渥太华 · 私人诊室</p>
+                        <h3 data-zh="YiClinic 益诊所" data-en="YiClinic">YiClinic 益诊所</h3>
+                        <ul class="location-meta">
+                            <li>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+                                <span data-zh="安静私密的一对一诊室，具体地址于预约确认时告知" data-en="A quiet, private one-on-one studio; address shared when your booking is confirmed">安静私密的一对一诊室，具体地址于预约确认时告知</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+                                <span data-zh="提供注册针灸师收据，可自行向保险报销" data-en="Official receipts for your insurance claims">提供注册针灸师收据，可自行向保险报销</span>
+                            </li>
+                        </ul>
+                        <div class="location-actions">
+                            <a href="https://calendly.com/yiclinic-ottawa" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-zh="预约" data-en="Book">预约</a>
                         </div>
-                        <div class="credential-item">
-                            <span class="credential-icon">🏥</span>
-                            <div>
-                                <h4 data-zh="丰富临床经验" data-en="Clinical Experience">丰富临床经验</h4>
-                                <p data-zh="北京中医医院皮肤科医师，安大略省注册针灸师（2021年至今）" data-en="Dermatologist at Beijing Hospital of TCM, Ontario Registered Acupuncturist (2021-present)">北京中医医院皮肤科医师，安大略省注册针灸师（2021年至今）</p>
-                            </div>
+                    </article>
+
+                    <article class="location-card reveal">
+                        <p class="location-area">Orléans</p>
+                        <h3>Bellefleur Physiotherapy</h3>
+                        <ul class="location-meta">
+                            <li>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                                <span>3095 St Joseph Blvd, Unit 511, Orléans, ON K1E 3W6</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+                                <a href="tel:+16134247852">613-424-7852</a>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span data-zh="可直接向保险公司报销（direct billing）" data-en="Direct billing to most insurers">可直接向保险公司报销（direct billing）</span>
+                            </li>
+                        </ul>
+                        <div class="location-actions">
+                            <a href="https://bellefleurphysio.janeapp.com/locations/orleans/book#/staff_member/19" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-zh="预约" data-en="Book">预约</a>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Bellefleur+Physiotherapy+3095+St+Joseph+Blvd+Orleans+ON" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" data-zh="地图" data-en="Map">地图</a>
                         </div>
-                        <div class="credential-item">
-                            <span class="credential-icon">💫</span>
-                            <div>
-                                <h4 data-zh="专业特长" data-en="Specialties">专业特长</h4>
-                                <p data-zh="面部美容针灸、皮肤调理、针灸、拔罐、刮痧、艾灸" data-en="Facial Cosmetic Acupuncture, Skin Care, Acupuncture, Cupping, Guasha, Moxibustion">面部美容针灸、皮肤调理、针灸、拔罐、刮痧、艾灸</p>
-                            </div>
+                    </article>
+
+                    <article class="location-card reveal">
+                        <p class="location-area">Orléans</p>
+                        <h3>The Massage Therapy Company</h3>
+                        <ul class="location-meta">
+                            <li>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                                <span>5-2020 Lanthier Dr, Orléans, ON K4A 3V4</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+                                <a href="tel:+16138302224">613-830-2224</a>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span data-zh="可直接向保险公司报销（direct billing）" data-en="Direct billing to most insurers">可直接向保险公司报销（direct billing）</span>
+                            </li>
+                        </ul>
+                        <div class="location-actions">
+                            <a href="https://themassagetherapycompany.janeapp.com/#/staff_member/61" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-zh="预约" data-en="Book">预约</a>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=The+Massage+Therapy+Company+2020+Lanthier+Dr+Orleans+ON" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" data-zh="地图" data-en="Map">地图</a>
                         </div>
-                        <div class="credential-item">
-                            <span class="credential-icon">🌐</span>
-                            <div>
-                                <h4 data-zh="语言服务" data-en="Language Services">语言服务</h4>
-                                <p data-zh="提供中文和英文服务" data-en="English and Mandarin Services">提供中文和英文服务</p>
-                            </div>
+                    </article>
+
+                    <article class="location-card reveal">
+                        <p class="location-area">Gloucester</p>
+                        <h3>New Life Physio &amp; Health Clinic</h3>
+                        <ul class="location-meta">
+                            <li>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                                <span>1742 Montreal Rd, Ottawa, ON K1J 6N3</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+                                <a href="tel:+16137411510">613-741-1510</a>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span data-zh="可直接向保险公司报销（direct billing）" data-en="Direct billing to most insurers">可直接向保险公司报销（direct billing）</span>
+                            </li>
+                        </ul>
+                        <div class="location-actions">
+                            <a href="https://newlifeptclinic.janeapp.com/#/staff_member/6" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-zh="预约" data-en="Book">预约</a>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=New+Life+Physio+1742+Montreal+Rd+Ottawa+ON" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" data-zh="地图" data-en="Map">地图</a>
                         </div>
-                    </div>
+                    </article>
+                </div>
 
-                    <blockquote class="philosophy" data-zh="张怿医师致力于通过针灸和中医技术帮助患者改善整体健康状况。她对人体能量系统有着深刻的理解，擅长运用传统中医方法平衡身体机能。凭借在皮肤科的专业背景，张怿医师对面部美容治疗有着持续的热情和研究，能够自然地帮助肌肤焕发年轻光彩，提升整体健康状态。" data-en="Yi Zhang is dedicated to improving overall health through acupuncture and TCM techniques. With deep understanding of the body's energy systems, she specializes in balancing body functions through traditional Chinese medicine methods. Her dermatology background gives her ongoing passion for cosmetic facial therapy, naturally helping skin look younger and healthier.">张怿医师致力于通过针灸和中医技术帮助患者改善整体健康状况。她对人体能量系统有着深刻的理解，擅长运用传统中医方法平衡身体机能。凭借在皮肤科的专业背景，张怿医师对面部美容治疗有着持续的热情和研究，能够自然地帮助肌肤焕发年轻光彩，提升整体健康状态。</blockquote>
-                </div>
+                <p class="locations-note reveal" data-zh="各诊所的价格与营业时间可能不同，请以预约页面为准。" data-en="Pricing and hours may vary by clinic; please see each booking page for details.">各诊所的价格与营业时间可能不同，请以预约页面为准。</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- 服务项目 -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-zh="服务项目" data-en="Services">服务项目</h2>
-                <div class="section-divider"></div>
-                <p class="section-description" data-zh="根据您的具体情况，提供针对性的中医针灸治疗方案" data-en="Personalized TCM and acupuncture treatment plans based on your specific needs">根据您的具体情况，提供针对性的中医针灸治疗方案</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3 data-zh="疼痛管理" data-en="Pain Management">疼痛管理</h3>
-                    <p data-zh="颈椎病、腰椎病、肩周炎、关节炎等各类疼痛症状的针灸治疗" data-en="Acupuncture treatment for neck, back, shoulder, and joint pain">颈椎病、腰椎病、肩周炎、关节炎等各类疼痛症状的针灸治疗</p>
-                    <ul class="service-list">
-                        <li data-zh="颈肩腰腿痛" data-en="Neck/Back/Leg Pain">颈肩腰腿痛</li>
-                        <li data-zh="头痛偏头痛" data-en="Headaches & Migraines">头痛偏头痛</li>
-                        <li data-zh="运动损伤" data-en="Sports Injuries">运动损伤</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌿</div>
-                    <h3 data-zh="内科调理" data-en="Internal Medicine">内科调理</h3>
-                    <p data-zh="消化系统、呼吸系统、神经系统等内科疾病的针灸辅助治疗" data-en="Acupuncture for digestive, respiratory, and nervous system disorders">消化系统、呼吸系统、神经系统等内科疾病的针灸辅助治疗</p>
-                    <ul class="service-list">
-                        <li data-zh="失眠焦虑" data-en="Insomnia & Anxiety">失眠焦虑</li>
-                        <li data-zh="消化不良" data-en="Digestive Issues">消化不良</li>
-                        <li data-zh="过敏症状" data-en="Allergies">过敏症状</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3 data-zh="面部美容针灸 ⭐" data-en="Facial Cosmetic Acupuncture ⭐">面部美容针灸 ⭐</h3>
-                    <p data-zh="张怿医师专业特长！结合皮肤科背景，运用美容针灸技术自然改善肤质，延缓衰老" data-en="Yi Zhang's specialty! Natural skin improvement and anti-aging through cosmetic acupuncture">张怿医师专业特长！结合皮肤科背景，运用美容针灸技术自然改善肤质，延缓衰老</p>
-                    <ul class="service-list">
-                        <li data-zh="面部提升紧致" data-en="Face Lifting & Tightening">面部提升紧致</li>
-                        <li data-zh="祛斑淡纹抗衰" data-en="Anti-aging & Wrinkle Reduction">祛斑淡纹抗衰</li>
-                        <li data-zh="改善气色肤质" data-en="Skin Tone & Texture">改善气色肤质</li>
-                        <li data-zh="自然健康无创" data-en="Natural & Non-invasive">自然健康无创</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⚖️</div>
-                    <h3 data-zh="体质调理" data-en="Constitution Tuning">体质调理</h3>
-                    <p data-zh="根据个人体质特点，进行针对性调理，增强体质，预防疾病" data-en="Personalized treatment to strengthen immunity and prevent illness">根据个人体质特点，进行针对性调理，增强体质，预防疾病</p>
-                    <ul class="service-list">
-                        <li data-zh="亚健康调理" data-en="Sub-health Conditions">亚健康调理</li>
-                        <li data-zh="免疫力提升" data-en="Immune System Boost">免疫力提升</li>
-                        <li data-zh="季节性调养" data-en="Seasonal Wellness">季节性调养</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🤰</div>
-                    <h3 data-zh="妇科保健" data-en="Women's Health">妇科保健</h3>
-                    <p data-zh="月经不调、更年期综合症等妇科问题的针灸调理" data-en="Acupuncture for menstrual disorders, menopause, and women's health issues">月经不调、更年期综合症等妇科问题的针灸调理</p>
-                    <ul class="service-list">
-                        <li data-zh="月经调理" data-en="Menstrual Regulation">月经调理</li>
-                        <li data-zh="产后恢复" data-en="Postpartum Recovery">产后恢复</li>
-                        <li data-zh="更年期调养" data-en="Menopause Support">更年期调养</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎋</div>
-                    <h3 data-zh="传统中医疗法" data-en="Traditional TCM Therapies">传统中医疗法</h3>
-                    <p data-zh="张怿医师提供多种传统中医理疗方法，全方位调理身体" data-en="Yi Zhang provides comprehensive TCM treatment methods for holistic wellness">张怿医师提供多种传统中医理疗方法，全方位调理身体</p>
-                    <ul class="service-list">
-                        <li data-zh="拔罐疗法" data-en="Cupping Therapy">拔罐疗法</li>
-                        <li data-zh="刮痧疗法" data-en="Guasha/Scraping">刮痧疗法</li>
-                        <li data-zh="艾灸疗法" data-en="Moxibustion">艾灸疗法</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 针灸疗效 -->
-    <section id="benefits" class="benefits">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-zh="针灸疗效" data-en="Benefits">针灸疗效</h2>
-                <div class="section-divider"></div>
-                <p class="section-description" data-zh="中医针灸的独特优势" data-en="Unique advantages of Traditional Chinese Medicine acupuncture">中医针灸的独特优势</p>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="benefit-number">01</div>
-                    <h3 data-zh="绿色疗法" data-en="Natural Therapy">绿色疗法</h3>
-                    <p data-zh="无药物副作用，纯物理疗法，安全可靠" data-en="No side effects, pure physical therapy, safe and reliable">无药物副作用，纯物理疗法，安全可靠</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-number">02</div>
-                    <h3 data-zh="标本兼治" data-en="Root & Symptom Treatment">标本兼治</h3>
-                    <p data-zh="不仅缓解症状，更从根本上调理身体" data-en="Not only relieves symptoms, but fundamentally treats the body">不仅缓解症状，更从根本上调理身体</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-number">03</div>
-                    <h3 data-zh="适应症广" data-en="Wide Applications">适应症广</h3>
-                    <p data-zh="可治疗多种慢性病及疑难杂症" data-en="Effective for various chronic conditions and complex disorders">可治疗多种慢性病及疑难杂症</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-number">04</div>
-                    <h3 data-zh="预防保健" data-en="Preventive Care">预防保健</h3>
-                    <p data-zh="增强免疫力，预防疾病，延年益寿" data-en="Boosts immunity, prevents illness, promotes longevity">增强免疫力，预防疾病，延年益寿</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系预约 -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-zh="欢迎预约就诊咨询" data-en="Welcome for Appointment & Consultation">欢迎预约就诊咨询</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-card">
-                    <h3 data-zh="诊所地址" data-en="Location">诊所地址</h3>
-                    <p class="contact-detail">Ottawa, Ontario, Canada</p>
-                    <p class="contact-note" data-zh="渥太华，安大略省" data-en="Ottawa, Ontario">渥太华，安大略省</p>
-                </div>
-                <div class="contact-card">
-                    <h3 data-zh="在线预约" data-en="Online Booking">在线预约</h3>
-                    <a href="https://calendly.com/yiclinic-ottawa" target="_blank" class="btn btn-primary btn-calendly">
-                        <span data-zh="立即预约" data-en="Book Now">立即预约</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2025 YiClinic 益诊所. All Rights Reserved. | Registered Acupuncturist in Ontario</p>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#home" class="logo logo--light">
+                    <span class="logo-seal" aria-hidden="true">益</span>
+                    <span class="logo-text">
+                        <span class="logo-name">YiClinic <span class="logo-cn">益诊所</span></span>
+                        <span class="logo-subtitle" data-zh="渥太华中医针灸" data-en="Acupuncture · Ottawa">渥太华中医针灸</span>
+                    </span>
+                </a>
+                <p data-zh="张怿 · 安大略省注册针灸师" data-en="Yi Zhang · Registered Acupuncturist, Ontario">张怿 · 安大略省注册针灸师</p>
             </div>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="#about" data-zh="关于医师" data-en="About">关于医师</a>
+                <a href="#services" data-zh="服务项目" data-en="Services">服务项目</a>
+                <a href="#visit" data-zh="就诊流程" data-en="Your Visit">就诊流程</a>
+                <a href="#faq" data-zh="常见问题" data-en="FAQ">常见问题</a>
+                <a href="#locations" data-zh="就诊地点" data-en="Locations">就诊地点</a>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="year">2026</span> YiClinic 益诊所. All rights reserved.</p>
+            <p class="footer-note" data-zh="本网站内容仅供参考，不能替代专业医疗建议。" data-en="Information on this site is for general education and is not a substitute for professional medical advice.">本网站内容仅供参考，不能替代专业医疗建议。</p>
         </div>
     </footer>
+
+    <a href="#locations" class="mobile-book" data-zh="在线预约" data-en="Book Now">在线预约</a>
 
     <script src="script.js"></script>
 </body>

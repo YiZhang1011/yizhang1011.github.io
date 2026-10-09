@@ -1,231 +1,112 @@
-// 移动端菜单切换
-const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+document.documentElement.classList.add('js');
+
+const navbar = document.getElementById('navbar');
 const navMenu = document.getElementById('navMenu');
+const menuToggle = document.getElementById('mobileMenuToggle');
+const mobileBook = document.querySelector('.mobile-book');
+const hero = document.getElementById('home');
 
-if (mobileMenuToggle) {
-    mobileMenuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        mobileMenuToggle.classList.toggle('active');
-    });
+// 移动端菜单
+function setMenu(open) {
+    navMenu.classList.toggle('open', open);
+    menuToggle.setAttribute('aria-expanded', String(open));
 }
 
-// 点击导航链接后关闭移动菜单
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
-    });
+menuToggle.addEventListener('click', () => {
+    setMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
 });
 
-// 滚动时更新导航栏激活状态
-window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section');
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= sectionTop - 100) {
-            current = section.getAttribute('id');
-        }
-    });
+navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => setMenu(false));
+});
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') setMenu(false);
+});
 
-    // 导航栏滚动效果
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+// 导航栏阴影 & 移动端预约按钮
+function onScroll() {
+    const y = window.scrollY;
+    navbar.classList.toggle('scrolled', y > 10);
+    if (mobileBook) {
+        mobileBook.classList.toggle('show', y > hero.offsetHeight * 0.6);
     }
-});
-
-// 平滑滚动到目标区块
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const navbarHeight = document.querySelector('.navbar').offsetHeight;
-            const targetPosition = target.offsetTop - navbarHeight;
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Calendly预约链接处理
-// 所有预约都通过Calendly处理，无需额外的表单验证
-
-// 显示消息提示
-function showMessage(message, type) {
-    // 创建消息元素
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `message message-${type}`;
-    messageDiv.textContent = message;
-    
-    // 添加样式
-    messageDiv.style.cssText = `
-        position: fixed;
-        top: 100px;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50px);
-        padding: 1rem 2rem;
-        background: ${type === 'success' ? '#8ba888' : '#e74c3c'};
-        color: white;
-        border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-        z-index: 10000;
-        font-weight: 500;
-        animation: slideDown 0.3s ease forwards;
-    `;
-
-    // 添加动画
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes slideDown {
-            to {
-                transform: translateX(-50%) translateY(0);
-            }
-        }
-        @keyframes slideUp {
-            to {
-                transform: translateX(-50%) translateY(-50px);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(style);
-
-    // 添加到页面
-    document.body.appendChild(messageDiv);
-
-    // 3秒后移除
-    setTimeout(() => {
-        messageDiv.style.animation = 'slideUp 0.3s ease forwards';
-        setTimeout(() => {
-            document.body.removeChild(messageDiv);
-        }, 300);
-    }, 3000);
 }
 
-// Calendly处理所有预约时间选择
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-// 页面元素进入视口时添加动画效果
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+// 当前区块高亮
+const navLinks = [...document.querySelectorAll('.nav-link')];
+const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+        });
+    });
+}, { rootMargin: '-45% 0px -50% 0px' });
+
+document.querySelectorAll('main section[id]').forEach(section => sectionObserver.observe(section));
+
+// 进入视口动画
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+    });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => {
+    const siblings = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+    const index = siblings.indexOf(el);
+    el.style.transitionDelay = `${Math.min(index, 5) * 80}ms`;
+    revealObserver.observe(el);
+});
+
+// 页脚年份
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// 中英文切换
+const pageMeta = {
+    zh: {
+        title: 'YiClinic 益诊所 - 渥太华中医针灸 | Acupuncture & TCM in Ottawa',
+        toggle: 'EN'
+    },
+    en: {
+        title: 'YiClinic - Acupuncture & Traditional Chinese Medicine in Ottawa',
+        toggle: '中文'
+    }
 };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
+function detectLanguage() {
+    const saved = localStorage.getItem('preferredLanguage');
+    if (saved === 'zh' || saved === 'en') return saved;
+    const browserLangs = navigator.languages || [navigator.language || ''];
+    return browserLangs.some(l => l.toLowerCase().startsWith('zh')) ? 'zh' : 'en';
+}
 
-// 观察所有需要动画的元素
-document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.service-card, .benefit-item, .contact-item, .credential-item');
-    
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+let currentLanguage = detectLanguage();
+
+function applyLanguage(lang) {
+    document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+    });
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    document.title = pageMeta[lang].title;
+    document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
+        btn.textContent = pageMeta[lang].toggle;
+    });
+}
+
+document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        currentLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
+        localStorage.setItem('preferredLanguage', currentLanguage);
+        applyLanguage(currentLanguage);
     });
 });
 
-// 添加当前年份到页脚
-const currentYear = new Date().getFullYear();
-const footerText = document.querySelector('.footer-bottom p');
-if (footerText) {
-    footerText.innerHTML = footerText.innerHTML.replace('2024', currentYear);
-}
-
-// Calendly自动管理预约时间范围
-
-// 语言切换功能
-let currentLanguage = 'zh'; // 默认中文
-
-function toggleLanguage() {
-    currentLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
-    updateLanguage();
-    
-    // 更新切换按钮文字
-    const toggleBtn = document.getElementById('languageToggle');
-    if (toggleBtn) {
-        toggleBtn.textContent = currentLanguage === 'zh' ? 'EN' : '中文';
-    }
-    
-    // 保存语言选择到本地存储
-    localStorage.setItem('preferredLanguage', currentLanguage);
-}
-
-function updateLanguage() {
-    const elements = document.querySelectorAll('[data-zh][data-en]');
-    
-    elements.forEach(element => {
-        if (currentLanguage === 'zh') {
-            element.textContent = element.getAttribute('data-zh');
-        } else {
-            element.textContent = element.getAttribute('data-en');
-        }
-    });
-    
-    // 处理表单placeholder
-    const placeholders = document.querySelectorAll('[data-zh-placeholder][data-en-placeholder]');
-    placeholders.forEach(element => {
-        if (currentLanguage === 'zh') {
-            element.placeholder = element.getAttribute('data-zh-placeholder');
-        } else {
-            element.placeholder = element.getAttribute('data-en-placeholder');
-        }
-    });
-    
-    // 处理select选项
-    const selectOptions = document.querySelectorAll('option[data-zh][data-en]');
-    selectOptions.forEach(option => {
-        if (currentLanguage === 'zh') {
-            option.textContent = option.getAttribute('data-zh');
-        } else {
-            option.textContent = option.getAttribute('data-en');
-        }
-    });
-    
-    // 更新页面语言属性
-    document.documentElement.lang = currentLanguage === 'zh' ? 'zh-CN' : 'en';
-}
-
-// 页面加载时检查保存的语言设置
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem('preferredLanguage');
-    if (savedLanguage) {
-        currentLanguage = savedLanguage;
-    }
-    
-    // 更新切换按钮文字
-    const toggleBtn = document.getElementById('languageToggle');
-    if (toggleBtn) {
-        toggleBtn.textContent = currentLanguage === 'zh' ? 'EN' : '中';
-        
-        // 添加点击事件监听器
-        toggleBtn.addEventListener('click', () => {
-            toggleLanguage();
-        });
-    }
-    
-    // 应用语言设置
-    updateLanguage();
-});
+applyLanguage(currentLanguage);

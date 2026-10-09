@@ -52,6 +52,7 @@ YiClinic website/
 ├── styles.css          # 样式文件
 ├── script.js           # 交互功能
 ├── profile.jpg         # 医师照片
+├── favicon.svg         # 网站图标
 ├── CNAME              # 域名配置
 └── README.md          # 说明文档
 ```
@@ -106,6 +107,6 @@ YiClinic website/
 ---
 
 **制作时间**：2024年10月  
-**最后更新**：2024年10月
+**最后更新**：2026年10月（全新设计）
 
 如有问题请联系网站开发者。
