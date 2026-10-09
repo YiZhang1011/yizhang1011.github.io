@@ -27,7 +27,7 @@
 - 流畅的动画效果
 
 ### 功能特色
-- 一键预约系统（Calendly集成）
+- 在线预约（私人诊室用 Square Appointments，合作诊所用各自的 Jane App）
 - 语言切换功能
 - 移动端优化
 - 快速加载
@@ -95,10 +95,12 @@ YiClinic website/
 
 ## 📞 预约系统
 
-网站集成Calendly预约系统：
-- **预约链接**：https://calendly.com/yiclinic-ottawa
-- **功能**：在线选择时间、自动确认、邮件提醒
-- **语言**：支持中英文界面
+| 地点 | 预约链接 |
+|---|---|
+| YiClinic 益诊所（Crevasse Rd, Orléans） | https://book.squareup.com/appointments/kmcly4hvuqby21/location/LDAK9QREGEEZS/services |
+| Bellefleur Physiotherapy（Orléans） | https://bellefleurphysio.janeapp.com/locations/orleans/book#/staff_member/19 |
+| The Massage Therapy Company（Orléans） | https://themassagetherapycompany.janeapp.com/#/staff_member/61 |
+| New Life Physio & Health Clinic（Gloucester） | https://newlifeptclinic.janeapp.com/#/staff_member/6 |
 
 ## 📄 许可证
 
