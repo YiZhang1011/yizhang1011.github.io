@@ -81,44 +81,29 @@ document.querySelectorAll('.reveal').forEach(el => {
 // 页脚年份
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// 中英文切换
-const pageMeta = {
-    zh: {
-        title: 'YiClinic 益诊所 - 渥太华中医针灸 | Acupuncture & TCM in Ottawa',
-        toggle: 'EN'
-    },
-    en: {
-        title: 'YiClinic - Acupuncture & Traditional Chinese Medicine in Ottawa',
-        toggle: '中文'
+// 中英文：英文在 /，中文在 /zh/。
+// 首次访问时按浏览器语言跳到对应页面；用户点过切换按钮后，记住其选择，不再自动跳转。
+// 搜索引擎爬虫不跳转，保证两种语言的页面都能被收录。
+(function () {
+    const KEY = 'preferredLanguage';
+    const pageLang = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
+    const switchLink = document.querySelector('[data-lang-switch]');
+    if (!switchLink) return;
+
+    switchLink.addEventListener('click', () => {
+        try { localStorage.setItem(KEY, switchLink.dataset.langSwitch); } catch (e) {}
+    });
+
+    const isBot = /bot|crawl|spider|slurp|bing|google|baidu|yandex|duckduck|facebookexternalhit|preview/i.test(navigator.userAgent);
+    if (isBot) return;
+
+    let wanted = null;
+    try { wanted = localStorage.getItem(KEY); } catch (e) {}
+    if (wanted !== 'zh' && wanted !== 'en') {
+        const langs = navigator.languages || [navigator.language || ''];
+        wanted = langs.some(l => l.toLowerCase().startsWith('zh')) ? 'zh' : 'en';
     }
-};
-
-function detectLanguage() {
-    const saved = localStorage.getItem('preferredLanguage');
-    if (saved === 'zh' || saved === 'en') return saved;
-    const browserLangs = navigator.languages || [navigator.language || ''];
-    return browserLangs.some(l => l.toLowerCase().startsWith('zh')) ? 'zh' : 'en';
-}
-
-let currentLanguage = detectLanguage();
-
-function applyLanguage(lang) {
-    document.querySelectorAll('[data-zh][data-en]').forEach(el => {
-        el.textContent = el.getAttribute(`data-${lang}`);
-    });
-    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-    document.title = pageMeta[lang].title;
-    document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
-        btn.textContent = pageMeta[lang].toggle;
-    });
-}
-
-document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
-    btn.addEventListener('click', () => {
-        currentLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
-        localStorage.setItem('preferredLanguage', currentLanguage);
-        applyLanguage(currentLanguage);
-    });
-});
-
-applyLanguage(currentLanguage);
+    if (wanted !== pageLang) {
+        location.replace(switchLink.href + location.hash);
+    }
+})();

@@ -272,6 +272,10 @@ ol {
 }
 
 .language-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     min-width: 52px;
     padding: 0.4rem 0.8rem;
     border: 1.5px solid var(--line);
