@@ -433,8 +433,11 @@ ol {
     margin-bottom: 1.5rem;
 }
 
+/* English headline: keep "Inner balance, outer radiance" on one line, like the Chinese couplet */
 html[lang="en"] .hero-title {
     letter-spacing: 0;
+    white-space: nowrap;
+    font-size: clamp(1.25rem, 3.3vw, 2.5rem);
 }
 
 .hero-lead {
@@ -1179,6 +1182,10 @@ html[lang="en"] .hero-title {
 }
 
 @media (max-width: 900px) {
+    html[lang="en"] .hero-title {
+        font-size: min(2.6rem, 5.6vw);
+    }
+
     :root {
         --nav-h: 68px;
     }
@@ -1325,6 +1332,10 @@ html[lang="en"] .hero-title {
 }
 
 @media (max-width: 640px) {
+    html[lang="en"] .hero-title {
+        font-size: 5.6vw;
+    }
+
     .container {
         padding: 0 20px;
     }
